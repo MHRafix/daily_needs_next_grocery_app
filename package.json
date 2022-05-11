@@ -9,20 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "12.1.5",
     "axios": "^0.27.2",
     "bcryptjs": "^2.4.3",
+    "formik": "^2.2.9",
     "js-cookies": "^1.0.4",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.1",
+    "next": "12.1.5",
     "next-connect": "^0.12.2",
     "next-redux-wrapper": "^7.0.5",
     "next-wrapper": "^0.0.3",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-icons": "^4.3.1",
     "react-redux": "^8.0.1",
+    "react-slick": "^0.29.0",
     "redux": "^4.2.0",
     "redux-devtools-extension": "^2.13.9",
-    "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.5",

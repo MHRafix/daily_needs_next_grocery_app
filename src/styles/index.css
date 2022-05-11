@@ -1,11 +1,78 @@
+/* google font import here */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
+/* tailwind dependencies support here */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* tailwind style compomnents are here */
 @layer components {
-  .body {
-    @apply font-poppins;
+  .page_main_wrapper {
+    @apply font-poppins text-light;
+  }
+
+  .container_wrapper {
+    @apply w-per_9 mx-auto px-1.5;
+  }
+
+  .topbar_wrapper {
+    @apply bg-black py-1 text-white text-thin;
+  }
+
+  .grid_layout {
+    @apply grid;
+  }
+
+  .layout_two {
+    @apply grid-rows-1 grid-cols-2;
+  }
+
+  .account_area {
+    @apply flex justify-end items-center;
+  }
+
+  .brand_area_wrapper {
+    @apply bg-gradient-to-r from-deep_cyan to-green py-2 flex items-center;
+  }
+  .brand_area {
+    @apply flex justify-between items-center;
+  }
+
+  .brand_wrapper {
+    @apply w-1/4;
+  }
+
+  .serach_area {
+    @apply w-2/4 flex items-center;
+  }
+
+  .search_field {
+    @apply w-4/5 p-1 shadow-lg italic outline-none rounded-tl-sm rounded-bl-sm;
+  }
+
+  .cart_area {
+    @apply w-1/4;
+  }
+
+  .cart_badge {
+    @apply w-15 h-15 rounded-full bg-white relative flex items-center justify-center text-semi_medium mr-5 text-black;
+  }
+
+  .cart_counter {
+    @apply absolute top-5 left-13 text-thin bg-red-600 px-extra_padding rounded-full flex items-center text-white;
+  }
+
+  /* all btn css here */
+  .btn {
+    @apply bg-gradient-to-r from-orangee to-orangee_red;
+  }
+
+  .btn-transparent {
+    @apply mx-3 bg-transparent w-auto;
+  }
+
+  .btn-search {
+    @apply h-init w-5 text-white rounded-tr-sm rounded-br-sm;
   }
 }
