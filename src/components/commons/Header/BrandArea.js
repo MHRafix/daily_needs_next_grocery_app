@@ -1,4 +1,5 @@
 import Image from "next/image";
+import NextLink from "next/link";
 import React from "react";
 import { MdShoppingCart } from "react-icons/md";
 import Logo from "../../../images/logo/logo.webp";
@@ -26,13 +27,15 @@ export default function BrandArea() {
             <button className="btn btn-search">Search</button>
           </div>
           <div className="cart_area">
-            <div className="flex justify-center items-center text-white">
-              <span className="cart_badge">
-                <MdShoppingCart />
-                <span className="cart_counter">0</span>
-              </span>
-              My Cart
-            </div>
+            <NextLink href="/cart_list" passHref>
+              <div className="flex justify-end items-center text-white text-thin cursor-pointer">
+                <span className="cart_badge">
+                  <MdShoppingCart />
+                  <span className="cart_counter">0</span>
+                </span>
+                My Cart
+              </div>
+            </NextLink>
           </div>
         </div>
       </div>

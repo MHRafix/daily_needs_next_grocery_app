@@ -8,6 +8,7 @@
 
 /* tailwind style compomnents are here */
 @layer components {
+  /* common css here */
   .page_main_wrapper {
     @apply font-poppins text-light;
   }
@@ -16,6 +17,7 @@
     @apply w-per_9 mx-auto px-1.5;
   }
 
+  /* header css here */
   .topbar_wrapper {
     @apply bg-black py-1 text-white text-thin;
   }
@@ -56,23 +58,50 @@
   }
 
   .cart_badge {
-    @apply w-15 h-15 rounded-full bg-white relative flex items-center justify-center text-semi_medium mr-5 text-black;
+    @apply w-13 h-13 rounded-full bg-white relative flex items-center justify-center text-normal mr-6 text-black;
   }
 
   .cart_counter {
-    @apply absolute top-5 left-13 text-thin bg-red-600 px-extra_padding rounded-full flex items-center text-white;
+    @apply absolute top-3 left-12 text-thin bg-red-600 px-extra_padding rounded-full flex items-center text-white;
   }
 
+  .navigation_wrapper {
+    @apply border-b py-1.5;
+  }
+
+  .navbars {
+    @apply flex items-center justify-center;
+  }
+
+  .category_slider_wrapper {
+    @apply py-4;
+  }
+
+  .category_card_wrapper {
+    @apply text-center cursor-pointer;
+  }
+
+  .catImg {
+    @apply bg-white shadow-sm p-1.5 rounded-full m-5;
+  }
+
+  .cat_name {
+    @apply text-thin text-black2 font-semibold tracking-wider;
+  }
+
+  .cat_items_qty {
+    @apply text-thin text-black3;
+  }
   /* all btn css here */
   .btn {
     @apply bg-gradient-to-r from-orangee to-orangee_red;
   }
 
   .btn-transparent {
-    @apply mx-3 bg-transparent w-auto;
+    @apply mx-2 bg-transparent w-auto;
   }
 
   .btn-search {
-    @apply h-init w-5 text-white rounded-tr-sm rounded-br-sm;
+    @apply h-init w-5 text-white rounded-tr-sm rounded-br-sm tracking-widest;
   }
 }
