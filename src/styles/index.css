@@ -74,7 +74,7 @@
   }
 
   .category_slider_wrapper {
-    @apply py-4;
+    @apply py-3 border-b;
   }
 
   .category_card_wrapper {
@@ -82,7 +82,7 @@
   }
 
   .catImg {
-    @apply bg-white shadow-sm p-1.5 rounded-full m-5;
+    @apply bg-white shadow-sm p-1.5 rounded-full m-5 hover:scale-105 hover:duration-300;
   }
 
   .cat_name {
