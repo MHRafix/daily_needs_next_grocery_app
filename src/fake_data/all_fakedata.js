@@ -433,7 +433,7 @@ export const products_data = [
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
       },
     ],
-    stock_available: 23,
+    stock_available: 0,
     sold_quantity: 10,
     additional_info: {
       description:

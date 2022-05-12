@@ -93,6 +93,10 @@
     @apply text-thin text-black3;
   }
 
+  .sale_products_wrapper {
+    @apply pt-4;
+  }
+
   .section_title_wrapper {
     @apply flex justify-between items-center;
   }
@@ -106,7 +110,7 @@
   }
 
   .prodcuts_area {
-    @apply grid grid-cols-4 gap-15;
+    @apply grid grid-cols-4 gap-15 pt-2;
   }
 
   #product_card {
@@ -121,8 +125,12 @@
     @apply bg-light_green py-extra_padding1 px-1.1 text-thin rounded-sm text-green border-green;
   }
 
+  #product_thumbnail {
+    @apply cursor-pointer;
+  }
+
   #product_title {
-    @apply text-sm m-0 font-bold text-info_color tracking-wide;
+    @apply text-sm m-0 cursor-pointer font-bold text-info_color tracking-wide;
   }
   #stock_status {
     @apply flex justify-center items-center text-green mb-7 text-thin;
@@ -130,6 +138,22 @@
 
   #stronger {
     @apply text-thin text-black3 capitalize;
+  }
+
+  #product_price {
+    @apply my-3;
+  }
+
+  #regular_price {
+    @apply text-thin line-through text-black3 mx-2;
+  }
+
+  #sale_price {
+    @apply text-black text-sm font-semibold;
+  }
+
+  #add_to_cart_area {
+    @apply w-3/4 mx-auto bg-light_red rounded-full p-1 h-15 flex justify-between items-center;
   }
   /* all btn css here */
   .btn {
@@ -143,8 +167,14 @@
   .btn-search {
     @apply h-init w-5 text-white rounded-tr-sm rounded-br-sm tracking-widest;
   }
-  .view_btn {
-    @apply !text-black2 !capitalize hover:!text-deep_cyan hover:!duration-300;
+  #cart_btn {
+    @apply bg-gradient-to-r from-orangee to-orangee_red flex justify-center items-center mx-auto mt-4 text-white px-1.1 py-extra_padding3 rounded-full text-thin;
+  }
+  #qty_controller {
+    @apply w-12 h-12 rounded-full bg-white text-black3 flex justify-center items-center hover:bg-gradient-to-r from-orangee to-orangee_red hover:text-white;
+  }
+  #view_btn {
+    @apply text-deep_cyan !capitalize hover:text-black2 hover:duration-300;
   }
 }
 
@@ -163,7 +193,7 @@
 }
 
 @layer utilities {
-  #stock_status_sign {
+  #stock_status_green {
     border: 1px solid #4eda92;
     border-radius: 2px;
     display: inline-block;
@@ -174,7 +204,21 @@
     width: 22px;
   }
 
-  #stock_status_sign::before {
+  #stock_status_green::before {
     content: "🟢";
+  }
+  #stock_status_red {
+    border: 1px solid #4eda92;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 9px;
+    height: 22px;
+    line-height: 19px;
+    text-align: center;
+    width: 22px;
+  }
+
+  #stock_status_red::before {
+    content: "🔴";
   }
 }

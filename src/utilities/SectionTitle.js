@@ -7,7 +7,7 @@ export default function SectionTitle({ section_title, percentage }) {
         {section_title}
         <span className="sale_percentage"> {percentage} OFF</span>
       </h3>
-      <button className="view_btn">view all</button>
+      <button id="view_btn">view all</button>
     </>
   );
 }
