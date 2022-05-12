@@ -92,6 +92,45 @@
   .cat_items_qty {
     @apply text-thin text-black3;
   }
+
+  .section_title_wrapper {
+    @apply flex justify-between items-center;
+  }
+
+  .section_title {
+    @apply font-medium capitalize text-normal;
+  }
+
+  .section_title span.sale_percentage {
+    @apply !font-light capitalize text-thin py-extra_padding1 px-extra_padding rounded-sm bg-blue-500 text-white ml-2;
+  }
+
+  .prodcuts_area {
+    @apply grid grid-cols-4 gap-15;
+  }
+
+  #product_card {
+    @apply bg-white shadow-md rounded-sm p-2 relative text-center;
+  }
+
+  #stock_slae_badge {
+    @apply flex justify-between items-center;
+  }
+
+  #sale_badge {
+    @apply bg-light_green py-extra_padding1 px-1.1 text-thin rounded-sm text-green border-green;
+  }
+
+  #product_title {
+    @apply text-sm m-0 font-bold text-info_color tracking-wide;
+  }
+  #stock_status {
+    @apply flex justify-center items-center text-green mb-7 text-thin;
+  }
+
+  #stronger {
+    @apply text-thin text-black3 capitalize;
+  }
   /* all btn css here */
   .btn {
     @apply bg-gradient-to-r from-orangee to-orangee_red;
@@ -103,5 +142,39 @@
 
   .btn-search {
     @apply h-init w-5 text-white rounded-tr-sm rounded-br-sm tracking-widest;
+  }
+  .view_btn {
+    @apply !text-black2 !capitalize hover:!text-deep_cyan hover:!duration-300;
+  }
+}
+
+@layer utilities {
+  button.view_btn {
+    color: #0cc5b7;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  button.view_btn:hover {
+    color: #333;
+    transition: 0.3s;
+  }
+}
+
+@layer utilities {
+  #stock_status_sign {
+    border: 1px solid #4eda92;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 9px;
+    height: 22px;
+    line-height: 19px;
+    text-align: center;
+    width: 22px;
+  }
+
+  #stock_status_sign::before {
+    content: "🟢";
   }
 }

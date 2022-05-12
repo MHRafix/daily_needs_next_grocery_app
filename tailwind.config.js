@@ -1,6 +1,9 @@
 module.exports = {
-  // purge: ["./src/pages/**/*.{js, html}"],
-  // mode: "jit",
+  purge: [
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+  ],
+  mode: "jit",
   darkMode: "media", // 'media' or 'class'
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
@@ -57,8 +60,10 @@ module.exports = {
       colors: {
         transparent: "transparent",
         green: "#2bd891",
+        light_green: "#f2fef2",
         deep_cyan: "#0cc5b7",
         white: "#ffffff",
+        gray: "#eff7fa",
         black1: "#000",
         black2: "#333",
         black3: "#666",
@@ -98,8 +103,11 @@ module.exports = {
         per_10: "50%",
       },
       padding: {
+        extra_padding1: "2px",
+        extra_padding2: "4px",
         extra_padding: "5px",
         1: "10px",
+        1.1: "11px",
         1.5: "15px",
         2: "20px",
         3: "30px",
