@@ -5,49 +5,11 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import Banner1 from "../../../../images/banners/slider1.webp";
 import Banner2 from "../../../../images/banners/slider2.webp";
+import SliderArrow from "../../../../utilities/SliderArrow";
 
 export default function BannerSlider() {
-  function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{
-          ...style,
-          background: "#2bd891",
-          padding: "20px",
-          borderRadius: "100px",
-          color: "white",
-          zIndex: 1222,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-        onClick={onClick}
-      />
-    );
-  }
-
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{
-          ...style,
-          background: "#0cc5b7",
-          padding: "20px",
-          borderRadius: "100px",
-          color: "white",
-          zIndex: 1222,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-        onClick={onClick}
-      />
-    );
-  }
+  // slider arrows are import from utilities
+  const { SampleNextArrow, SamplePrevArrow } = SliderArrow();
 
   const settings = {
     dots: false,
