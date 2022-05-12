@@ -48,8 +48,11 @@ export default function ProductCard({ product_data }) {
             <span style={{ color: "#666" }}> - 1 kg</span>
           </h5>
           <div id="product_price">
-            <span id="regular_price">৳ {regular_price}</span>
-            <span id="sale_price">৳ {sale_price}</span>
+            <span id={sale_price !== 0 ? "regular_price" : "sale_price"}>
+              ৳ {regular_price}
+            </span>
+
+            {sale_price !== 0 && <span id="sale_price">৳ {sale_price}</span>}
           </div>
         </div>
         <div id="card_action">
