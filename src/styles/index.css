@@ -66,7 +66,7 @@
   }
 
   .navigation_wrapper {
-    @apply border-b py-1.5;
+    @apply border-b-zinc-600 py-1.5;
   }
 
   .navbars {
@@ -74,7 +74,7 @@
   }
 
   .category_slider_wrapper {
-    @apply py-3 border-b;
+    @apply py-3;
   }
 
   .category_card_wrapper {
@@ -110,11 +110,11 @@
   }
 
   .prodcuts_area {
-    @apply grid grid-cols-4 gap-15 pt-2;
+    @apply grid grid-cols-4 gap-15 pt-2 medium:grid-cols-2 small:grid-cols-1 small:gap-0;
   }
 
   #product_card {
-    @apply bg-white shadow-md rounded-sm p-2 relative text-center;
+    @apply bg-white shadow-md rounded-sm p-2 relative text-center medium:my-5 small:my-5;
   }
 
   #stock_slae_badge {

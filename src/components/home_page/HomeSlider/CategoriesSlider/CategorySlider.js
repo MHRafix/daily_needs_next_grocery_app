@@ -58,7 +58,10 @@ export default function CategorySlider() {
     ],
   };
   return (
-    <div className="category_slider_wrapper">
+    <div
+      className="category_slider_wrapper"
+      style={{ borderBottom: "1px solid #eee" }}
+    >
       <Slider {...settings}>
         {categories_data.map((category) => (
           <CategoryCard key={category._id} category_data={category} />

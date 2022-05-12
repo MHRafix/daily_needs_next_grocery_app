@@ -4,7 +4,10 @@ import { header_navigation } from "../../../fake_data/all_fakedata";
 
 export default function NavigationBar() {
   return (
-    <div className="navigation_wrapper">
+    <div
+      className="navigation_wrapper"
+      style={{ borderBottom: "1px solid #eee" }}
+    >
       <div className="container_wrapper">
         <div className="navbars">
           {header_navigation.map((link) => (
