@@ -145,7 +145,7 @@
   }
 
   #regular_price {
-    @apply text-thin line-through text-black3 mx-2;
+    @apply text-thin line-through text-black3 mr-2;
   }
 
   #sale_price {
@@ -162,11 +162,18 @@
 
   /* breadcrumb css here  */
   .breadcrumb_wrapper {
-    @apply py-1.5 bg-white mb-10 text-black3 text-thin;
+    @apply py-1.5 bg-white mb-5 text-black3 text-thin;
   }
 
   .home_nav {
     @apply font-bold text-black3 cursor-pointer;
+  }
+
+  .single_product_view {
+    @apply grid sm:grid-cols-2;
+  }
+  .product_title {
+    @apply text-medium my-5;
   }
 
   /* all btn css here */

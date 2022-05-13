@@ -50,6 +50,7 @@ module.exports = {
       colors: {
         transparent: "transparent",
         green: "#2bd891",
+        deep_green: "#28a745",
         light_green: "#f2fef2",
         deep_cyan: "#0cc5b7",
         white: "#ffffff",
@@ -102,7 +103,9 @@ module.exports = {
         1.1: "11px",
         1.2: "12px",
         1.5: "15px",
+        1.9: "19px",
         2: "20px",
+        2.5: "29px",
         3: "30px",
         4: "40px",
         5: "50px",
