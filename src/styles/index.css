@@ -110,11 +110,11 @@
   }
 
   .prodcuts_area {
-    @apply grid pt-2 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 md:gap-12 xl:grid-cols-4 xl:gap-15;
+    @apply grid pt-2 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 md:gap-12 xl:grid-cols-4 xl:gap-12;
   }
 
   #product_card {
-    @apply bg-white shadow-md my-5 rounded-sm p-2 relative text-center;
+    @apply bg-white mx-1 shadow-md my-5 rounded-sm p-2 relative text-center;
   }
 
   #stock_slae_badge {
@@ -157,7 +157,7 @@
   }
 
   .middle_banner_wrapper {
-    @apply my-20;
+    @apply mt-15 mb-5 flex justify-between items-center bg-page_white;
   }
   /* all btn css here */
   .btn {

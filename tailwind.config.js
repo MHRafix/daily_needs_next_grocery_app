@@ -63,6 +63,7 @@ module.exports = {
         light_red: "#fff1f0",
         deep_dark: "#c4bedd",
         light_blue: "#24a3b5",
+        page_white: "#fef6d4",
       },
       spacing: {
         1: "2px",

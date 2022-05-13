@@ -1,4 +1,5 @@
 import React from "react";
+import BestSaleProductsMain from "./BestSaleProducts/BestSaleProductsMain";
 import BannerSlider from "./HomeSlider/BannerSlider/BannerSlider";
 import CategorySlider from "./HomeSlider/CategoriesSlider/CategorySlider";
 import MiddleBanner from "./MiddleBanner/MiddleBanner";
@@ -11,6 +12,7 @@ export default function HomeMain() {
       <BannerSlider />
       <SaleProductsMain />
       <MiddleBanner />
+      <BestSaleProductsMain />
     </>
   );
 }
