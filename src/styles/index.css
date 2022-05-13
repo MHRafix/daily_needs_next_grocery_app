@@ -110,11 +110,11 @@
   }
 
   .prodcuts_area {
-    @apply grid grid-cols-4 gap-15 pt-2 medium:grid-cols-2 small:grid-cols-1 small:gap-0;
+    @apply grid pt-2 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 md:gap-12 xl:grid-cols-4 xl:gap-15;
   }
 
   #product_card {
-    @apply bg-white shadow-md rounded-sm p-2 relative text-center medium:my-5 small:my-5;
+    @apply bg-white shadow-md my-5 rounded-sm p-2 relative text-center;
   }
 
   #stock_slae_badge {
@@ -154,6 +154,10 @@
 
   #add_to_cart_area {
     @apply w-3/4 mx-auto bg-light_red rounded-full p-1 h-15 flex justify-between items-center;
+  }
+
+  .middle_banner_wrapper {
+    @apply my-20;
   }
   /* all btn css here */
   .btn {

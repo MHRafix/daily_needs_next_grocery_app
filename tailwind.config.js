@@ -11,16 +11,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      screens: {
-        tv: "1400px",
-        pc: "1199px",
-        laptop: "1024px",
-        tablet: "992px",
-        medium: "768px",
-        small: "500px",
-        mobile: "375px",
-        minimobile: "300px",
-      },
       width: {
         1: "50px",
         2: "60px",
