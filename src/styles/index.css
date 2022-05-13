@@ -159,6 +159,16 @@
   .middle_banner_wrapper {
     @apply mt-15 mb-5 flex justify-between items-center bg-page_white;
   }
+
+  /* breadcrumb css here  */
+  .breadcrumb_wrapper {
+    @apply py-1.5 bg-white mb-10 text-black3 text-thin;
+  }
+
+  .home_nav {
+    @apply font-bold text-black3 cursor-pointer;
+  }
+
   /* all btn css here */
   .btn {
     @apply bg-gradient-to-r from-orangee to-orangee_red;

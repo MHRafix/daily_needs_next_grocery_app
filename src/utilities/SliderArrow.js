@@ -6,7 +6,7 @@ export default function SliderArrow() {
         className={className}
         style={{
           ...style,
-          background: "#2bd891",
+          background: "linear-gradient(135deg, #0cc5b7 0%,#2bd891 100%)",
           padding: "20px",
           borderRadius: "100px",
           color: "white",
@@ -27,7 +27,7 @@ export default function SliderArrow() {
         className={className}
         style={{
           ...style,
-          background: "#0cc5b7",
+          background: "linear-gradient(135deg, #0cc5b7 0%,#2bd891 100%)",
           padding: "20px",
           borderRadius: "100px",
           color: "white",
