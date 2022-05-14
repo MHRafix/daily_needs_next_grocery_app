@@ -1,6 +1,9 @@
 import Image from "next/image";
 import React, { useState } from "react";
+import { FaTruckMoving } from "react-icons/fa";
+import { GiBeachBag } from "react-icons/gi";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import SingleThumbnail from "../../images/products/p1.webp";
 
 export default function ProductView({ product }) {
   const [qty, setQty] = useState(1);
@@ -8,11 +11,9 @@ export default function ProductView({ product }) {
   return (
     <div className="single_product_view">
       <div className="image_wrapper">
-        {product?.thumbnail && (
-          <Image src={product?.thumbnail} alt="single_product_image" />
-        )}
+        <Image src={SingleThumbnail} alt="single_product_image" />
       </div>
-      <div className="product_details_wrapper p-2 bg-white shadow-lg">
+      <div className="product_details_wrapper">
         <span id="sale_badge" className="!text-light">
           15% OFF
         </span>
@@ -36,23 +37,63 @@ export default function ProductView({ product }) {
         <h5 className="text-thin text-black3 capitalize">
           {product?.product_status}
         </h5>
-        <div className="my-10">
-          <div id="add_to_cart_area" className="!w-36 !mx-0">
-            <button id="qty_controller" onClick={() => setQty(qty - 1)}>
+        <div className="flex items-center my-7">
+          <div id="add_to_cart_action">
+            <button
+              id="qty_controller"
+              className="!shadow-md !bg-indigo-50"
+              onClick={() => setQty(qty - 1)}
+            >
               -
             </button>
             <span id="cart_qty">{qty}</span>
-            <button id="qty_controller" onClick={() => setQty(qty + 1)}>
+            <button
+              id="qty_controller"
+              className="!shadow-md !bg-indigo-50"
+              onClick={() => setQty(qty + 1)}
+            >
               +
             </button>
           </div>
           <div id="add_to_cart_btn">
-            <button id="cart_btn" className="!mx-0 !px-1.9 !py-1 !text-light">
+            <button id="cart_btn" className="!mt-0 !py-1 !px-1.5">
               <MdOutlineShoppingCart /> &nbsp; Add to cart
             </button>
           </div>
-          <div className="desc text-black3 my-5">
-            <p>{product?.additional_info?.description}</p>
+        </div>
+        <div className="desc text-black3 my-10">
+          <h3 className="font-semibold text-semi_medium my-2">
+            Quick Overview
+          </h3>
+          <p className="text-light">
+            {product?.additional_info?.description.slice(0, 200)}...
+          </p>
+        </div>
+        <div className="taxenomy text-sm text-black3">
+          <span className="text-sm text-red-500">Category : </span>
+          {product?.category}
+        </div>
+        <div className="feature_card_wrapper">
+          <h3 className="text-light text-black2">Why shop from Daily Need?</h3>
+          <div className="our_features">
+            <div className="feature_card">
+              <div className="card_icon">
+                <FaTruckMoving />
+              </div>
+              <div className="card_content">
+                <h3 className="text-light text-info_color">Free Delivery</h3>
+                <p className="text-thin text-black3">Lorem ispum dollar...</p>
+              </div>
+            </div>
+            <div className="feature_card">
+              <div className="card_icon">
+                <GiBeachBag />
+              </div>
+              <div className="card_content">
+                <h3 className="text-light text-info_color">100% Guarantee</h3>
+                <p className="text-thin text-black3">Lorem ispum dollar...</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
