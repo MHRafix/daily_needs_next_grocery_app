@@ -130,8 +130,9 @@
   }
 
   #product_title {
-    @apply text-sm m-0 cursor-pointer font-bold text-info_color tracking-wide;
+    @apply text-sm my-1 cursor-pointer font-bold text-info_color tracking-wide;
   }
+
   #stock_status {
     @apply flex justify-center items-center text-green mb-7 text-thin;
   }
@@ -203,6 +204,27 @@
   .card_icon {
     @apply p-2 bg-deep_green text-semi_medium text-white rounded-full mr-5;
   }
+
+  .cart_table {
+    @apply shadow-lg py-2;
+  }
+
+  .table_full {
+    @apply w-full text-center;
+  }
+
+  .table_head {
+    @apply py-1.5 font-semibold text-black3 grid grid-cols-6 border border-y-slate-200 border-x-white;
+  }
+
+  .table_body {
+    @apply py-2 grid grid-cols-6 text-black3;
+  }
+
+  .table_body_item {
+    @apply flex items-center justify-center;
+  }
+
   /* all btn css here */
   .btn {
     @apply bg-gradient-to-r from-orangee to-orangee_red;
@@ -255,8 +277,9 @@
   #stock_status_green::before {
     content: "🟢";
   }
+
   #stock_status_red {
-    border: 1px solid #4eda92;
+    border: 1px solid red;
     border-radius: 2px;
     display: inline-block;
     font-size: 9px;
