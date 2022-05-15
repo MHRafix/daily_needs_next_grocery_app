@@ -2,9 +2,11 @@ import Image from "next/image";
 import NextLink from "next/link";
 import React from "react";
 import { MdShoppingCart } from "react-icons/md";
+import { useSelector } from "react-redux";
 import Logo from "../../../images/logo/logo.webp";
 
 export default function BrandArea() {
+  const cart_list = useSelector((state) => state.cart_product.cart_list);
   return (
     <div className="brand_area_wrapper">
       <div className="container_wrapper">
@@ -31,7 +33,7 @@ export default function BrandArea() {
               <div className="flex justify-end items-center text-white text-thin cursor-pointer">
                 <span className="cart_badge">
                   <MdShoppingCart />
-                  <span className="cart_counter">0</span>
+                  <span className="cart_counter">{cart_list.length}</span>
                 </span>
                 My Cart
               </div>
@@ -39,7 +41,6 @@ export default function BrandArea() {
           </div>
         </div>
       </div>
-      ;
     </div>
   );
 }

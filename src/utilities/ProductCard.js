@@ -3,6 +3,9 @@ import NextLink from "next/link";
 import React, { useState } from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { useDispatch } from "react-redux";
+import { handleAddToCart } from "../utilities/handleCart";
+
 export default function ProductCard({ product_data }) {
   const {
     _id,
@@ -17,6 +20,7 @@ export default function ProductCard({ product_data }) {
     product_status,
   } = product_data;
 
+  const dispatch = useDispatch();
   const { regular_price, sale_price } = prices;
 
   const [qty, setQty] = useState(1);
@@ -66,7 +70,12 @@ export default function ProductCard({ product_data }) {
             </button>
           </div>
           <div id="add_to_cart_btn">
-            <button id="cart_btn">
+            <button
+              id="cart_btn"
+              onClick={() =>
+                handleAddToCart(product_data, stock_available, dispatch)
+              }
+            >
               <MdOutlineShoppingCart /> &nbsp; Add to cart
             </button>
           </div>
