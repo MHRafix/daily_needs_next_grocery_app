@@ -222,7 +222,7 @@
   }
 
   .table_body_item {
-    @apply flex items-center justify-center;
+    @apply flex items-center justify-center h-20;
   }
 
   /* all btn css here */
