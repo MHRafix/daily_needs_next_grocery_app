@@ -225,6 +225,17 @@
     @apply flex items-center justify-center h-20;
   }
 
+  .grid_shop_area {
+    @apply flex justify-between items-center;
+  }
+
+  .sidebar_area {
+    @apply p-1 bg-white border border-slate-200 w-1/5;
+  }
+
+  .shop_area {
+    @apply w-3/4 text-center;
+  }
   /* all btn css here */
   .btn {
     @apply bg-gradient-to-r from-orangee to-orangee_red;
@@ -272,6 +283,7 @@
     line-height: 19px;
     text-align: center;
     width: 22px;
+    color: black3;
   }
 
   #stock_status_green::before {
