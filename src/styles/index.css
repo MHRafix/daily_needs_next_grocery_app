@@ -113,6 +113,10 @@
     @apply grid pt-2 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 md:gap-12 xl:grid-cols-4 xl:gap-12;
   }
 
+  .shop_products {
+    @apply grid pt-2 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 md:gap-12 xl:grid-cols-3 xl:gap-12;
+  }
+
   #product_card {
     @apply bg-white mx-1 shadow-md my-5 rounded-sm p-2 relative text-center;
   }
@@ -226,7 +230,7 @@
   }
 
   .grid_shop_area {
-    @apply flex justify-between items-center;
+    @apply flex justify-between;
   }
 
   .sidebar_area {
@@ -236,6 +240,7 @@
   .shop_area {
     @apply w-3/4 text-center;
   }
+
   /* all btn css here */
   .btn {
     @apply bg-gradient-to-r from-orangee to-orangee_red;
