@@ -178,7 +178,7 @@
   }
 
   #category_wrapper {
-    @apply flex items-center justify-start capitalize text-black4 text-sm mb-3;
+    @apply flex items-center justify-start capitalize text-black4 text-sm mb-3 cursor-pointer hover:text-black2 hover:duration-300;
   }
 
   #category_input {
@@ -254,11 +254,27 @@
   }
 
   .sidebar_area {
-    @apply p-1 bg-white w-1/4 mr-4;
+    @apply bg-white w-1/4 mr-4;
   }
 
   .shop_area {
     @apply w-3/4 text-center ml-4;
+  }
+
+  .shop_controller {
+    @apply flex justify-between items-center;
+  }
+
+  .layout_changer_btn {
+    @apply text-slate-600 text-medium border border-slate-200 p-extra_padding3 font-bold;
+  }
+
+  .layout_changer_btn_active {
+    @apply text-orange-500 text-medium border border-slate-200 p-extra_padding3 font-bold;
+  }
+
+  #product_sorting {
+    @apply p-1 border border-slate-200 outline-none text-black4;
   }
 
   /* all btn css here */

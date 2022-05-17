@@ -3,10 +3,13 @@ import React, { useState } from "react";
 import { FaTruckMoving } from "react-icons/fa";
 import { GiBeachBag } from "react-icons/gi";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { useDispatch } from "react-redux";
 import SingleThumbnail from "../../images/products/p1.webp";
+import { handleAddToCart } from "../../utilities/handleCart";
 
 export default function ProductView({ product }) {
   const [qty, setQty] = useState(1);
+  const dispatch = useDispatch();
 
   return (
     <div className="single_product_view">
@@ -56,9 +59,17 @@ export default function ProductView({ product }) {
             </button>
           </div>
           <div id="add_to_cart_btn">
-            <button id="cart_btn" className="!mt-0 !py-1 !px-1.5">
-              <MdOutlineShoppingCart /> &nbsp; Add to cart
-            </button>
+            {product?.stock_available > 0 ? (
+              <button
+                id="cart_btn"
+                className="!mt-0 !py-1 !px-1.5"
+                onClick={() => handleAddToCart(product, dispatch)}
+              >
+                <MdOutlineShoppingCart /> &nbsp; Add to cart
+              </button>
+            ) : (
+              <button id="cart_btn">Read more</button>
+            )}
           </div>
         </div>
         <div className="desc text-black3 my-10">

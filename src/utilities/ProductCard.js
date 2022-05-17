@@ -19,7 +19,6 @@ export default function ProductCard({ product_data }) {
     additional_info,
     product_status,
   } = product_data;
-
   const dispatch = useDispatch();
   const { regular_price, sale_price } = prices;
 
@@ -36,14 +35,14 @@ export default function ProductCard({ product_data }) {
               <div id="stock_status_red"></div>
             )}
           </div>
-          <NextLink href={`shop/singleProducts/${_id}`} passHref>
+          <NextLink href={`/shop/singleProducts/${_id}`} passHref>
             <div id="product_thumbnail">
               <Image src={thumbnail} alt="product_thumbnail" />
             </div>
           </NextLink>
         </div>
         <div id="card_body">
-          <NextLink href={`shop/singleProducts/${_id}`} passHref>
+          <NextLink href={`/shop/singleProducts/${_id}`} passHref>
             <h3 id="product_title">{title}</h3>
           </NextLink>
           <h5 id="stock_status">
@@ -70,14 +69,18 @@ export default function ProductCard({ product_data }) {
             </button>
           </div>
           <div id="add_to_cart_btn">
-            <button
-              id="cart_btn"
-              onClick={() =>
-                handleAddToCart(product_data, stock_available, dispatch)
-              }
-            >
-              <MdOutlineShoppingCart /> &nbsp; Add to cart
-            </button>
+            {stock_available > 0 ? (
+              <button
+                id="cart_btn"
+                onClick={() => handleAddToCart(product_data, dispatch, qty)}
+              >
+                <MdOutlineShoppingCart /> &nbsp; Add to cart
+              </button>
+            ) : (
+              <NextLink href={`/shop/singleProducts/${_id}`} passHref>
+                <button id="cart_btn">Read more</button>
+              </NextLink>
+            )}
           </div>
         </div>
       </div>
