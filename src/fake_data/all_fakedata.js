@@ -300,7 +300,7 @@ export const products_data = [
       regular_price: 8.56,
       sale_price: 5.99,
     },
-    category: "Fruits & Vegetables",
+    category: "Pet Care",
 
     reviews_ratings: [
       {

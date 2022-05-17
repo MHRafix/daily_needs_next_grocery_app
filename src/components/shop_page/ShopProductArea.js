@@ -1,8 +1,7 @@
 import React from "react";
-import { products_data } from "../../fake_data/all_fakedata";
 import ProductCard from "../../utilities/ProductCard";
 
-export default function ShopProductArea() {
+export default function ShopProductArea({ products_data }) {
   return (
     <div className="shop_product_area">
       <div className="shop_controller">shop products controller</div>

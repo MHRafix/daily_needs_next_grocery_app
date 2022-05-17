@@ -5,7 +5,7 @@ import React from "react";
 export default function CategoryCard({ category_data }) {
   const { cat_name, cat_image, cat_items } = category_data;
   return (
-    <NextLink href={`/shop/category/${cat_name}`} passHref>
+    <NextLink href={`/categories/${cat_name}`} passHref>
       <div className="category_card_wrapper">
         <div className="category_image">
           <Image
