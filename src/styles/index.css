@@ -66,7 +66,7 @@
   }
 
   .navigation_wrapper {
-    @apply border-b-zinc-600 py-1.5;
+    @apply border-b-zinc-600 py-1.5 md:block;
   }
 
   .navbars {
@@ -165,6 +165,26 @@
     @apply mt-15 mb-5 flex justify-between items-center bg-page_white;
   }
 
+  .dynamic_filter {
+    @apply border mb-12 border-slate-200;
+  }
+
+  .filter_name {
+    @apply text-orangee_red text-light px-1.5 py-1 font-semibold border border-white border-b-slate-200 tracking-wider capitalize;
+  }
+
+  .children_wrapper {
+    @apply p-1.5;
+  }
+
+  #category_wrapper {
+    @apply flex items-center justify-start capitalize text-black4 text-sm mb-3;
+  }
+
+  #category_input {
+    @apply text-black4 border border-black4;
+  }
+
   /* breadcrumb css here  */
   .breadcrumb_wrapper {
     @apply py-1.5 bg-white mb-5 text-black3 text-thin;
@@ -234,11 +254,11 @@
   }
 
   .sidebar_area {
-    @apply p-1 bg-white border border-slate-200 w-1/5;
+    @apply p-1 bg-white w-1/4 mr-4;
   }
 
   .shop_area {
-    @apply w-3/4 text-center;
+    @apply w-3/4 text-center ml-4;
   }
 
   /* all btn css here */
@@ -308,5 +328,110 @@
 
   #stock_status_red::before {
     content: "🔴";
+  }
+
+  #container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slider {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    color: #666;
+  }
+
+  .slider__track,
+  .slider__range,
+  .slider__left-value,
+  .slider__right-value {
+    position: absolute;
+  }
+
+  .slider__track,
+  .slider__range {
+    border-radius: 3px;
+    height: 5px;
+  }
+
+  .slider__track {
+    background-color: #ced4da;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .slider__range {
+    background-color: #9fe5e1;
+    z-index: 2;
+  }
+
+  .slider__left-value,
+  .slider__right-value {
+    color: #dee2e6;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
+  .slider__left-value {
+    left: 6px;
+  }
+
+  .slider__right-value {
+    right: -4px;
+  }
+
+  /* Removing the default appearance */
+  .thumb,
+  .thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .thumb {
+    pointer-events: none;
+    position: absolute;
+    height: 0;
+    width: 200px;
+    outline: none;
+  }
+
+  .thumb--left {
+    z-index: 3;
+  }
+
+  .thumb--right {
+    z-index: 4;
+  }
+
+  /* For Chrome browsers */
+  .thumb::-webkit-slider-thumb {
+    background-color: #f1f5f7;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px #ced4da;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
+  }
+
+  /* For Firefox browsers */
+  .thumb::-moz-range-thumb {
+    background-color: #f1f5f7;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px #ced4da;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
   }
 }

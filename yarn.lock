@@ -1892,6 +1892,11 @@
     "loose-envify" "^1.1.0"
     "scheduler" "^0.22.0"
 
+"react-dual-range-slider@^1.0.4":
+  "integrity" "sha1-UCtcBZfJHQOhkp/xrknouIyuITE="
+  "resolved" "https://registry.npmjs.org/react-dual-range-slider/-/react-dual-range-slider-1.0.4.tgz"
+  "version" "1.0.4"
+
 "react-fast-compare@^2.0.1":
   "integrity" "sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw=="
   "resolved" "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-2.0.4.tgz"

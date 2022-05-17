@@ -58,6 +58,7 @@ module.exports = {
         black1: "#000",
         black2: "#333",
         black3: "#666",
+        black4: "#888",
         orangee: "#ff934b",
         orangee_red: "#ff5e62",
         info_color: "#0cc5b7",
