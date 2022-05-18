@@ -11,7 +11,7 @@ export default function CartPageMain() {
     <>
       <Breadcrumb bread_nav={bread_string} />
       <CartTable carted_products={carted_products} />
-      <CheckoutTable />
+      <CheckoutTable carted_products={carted_products} />
     </>
   );
 }

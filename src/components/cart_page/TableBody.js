@@ -19,7 +19,7 @@ export default function TableBody({ carted_products }) {
       <div className="table_body_item">
         <h3 className="text-light text-black3">{title}</h3>
       </div>
-      <div className="table_body_item">$ {prices.sale_price}</div>
+      <div className="table_body_item">৳ {prices.sale_price}</div>
       <div className="table_body_item">
         <div id="add_to_cart_area">
           <button id="qty_controller" onClick={() => setQty(qty - 1)}>
@@ -31,9 +31,14 @@ export default function TableBody({ carted_products }) {
           </button>
         </div>
       </div>
-      <div className="table_body_item">$ {prices.sale_price * qty}</div>
       <div className="table_body_item">
-        <span className="bg-red-500 text-white cursor-pointer px-extra_padding3 rounded-full">
+        ৳ {(prices.sale_price * qty).toFixed(2)}
+      </div>
+      <div className="table_body_item">
+        <span
+          className="bg-red-500 text-white cursor-pointer text-semi_medium px-extra_padding3 !rounded-sm"
+          id="cart_btn"
+        >
           &times;
         </span>
       </div>

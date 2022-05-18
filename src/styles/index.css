@@ -277,6 +277,32 @@
     @apply p-1 border border-slate-200 outline-none text-black4;
   }
 
+  .checkout_table_wrapper {
+    @apply my-20 shadow-lg p-2 !text-left;
+  }
+
+  .checkout_table {
+    @apply mt-5;
+  }
+
+  .checkout_table_title {
+    @apply text-semi_medium font-semi_bold text-black2 tracking-wide;
+  }
+
+  .table_head_check {
+    @apply grid grid-cols-2 border border-slate-200;
+  }
+
+  .table_head_check_item {
+    @apply p-2 font-semibold text-black2;
+  }
+  .table_head_check_item1 {
+    @apply border border-l-slate-200 border-transparent p-2 text-black3;
+  }
+
+  .shipping_calculate {
+    @apply my-2;
+  }
   /* all btn css here */
   .btn {
     @apply bg-gradient-to-r from-orangee to-orangee_red;
