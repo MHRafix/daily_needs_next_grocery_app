@@ -63,7 +63,7 @@ export default function ProductView({ product }) {
               <button
                 id="cart_btn"
                 className="!mt-0 !py-1 !px-1.5"
-                onClick={() => handleAddToCart(product, dispatch)}
+                onClick={() => handleAddToCart(product, dispatch, qty)}
               >
                 <MdOutlineShoppingCart /> &nbsp; Add to cart
               </button>
