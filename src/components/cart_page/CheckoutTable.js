@@ -6,9 +6,9 @@ export default function CheckoutTable({ carted_products }) {
   if (carted_products) {
     for (const products of carted_products) {
       total_amount =
-        products.prices.sale_price > 0
-          ? total_amount + products.prices.sale_price * products.quantity
-          : total_amount + products.prices.regular_price * products.quantity;
+        products?.prices?.sale_price > 0
+          ? total_amount + products?.prices?.sale_price * products?.quantity
+          : total_amount + products?.prices?.regular_price * products?.quantity;
     }
   }
 

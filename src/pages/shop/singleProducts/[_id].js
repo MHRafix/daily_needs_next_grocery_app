@@ -3,6 +3,7 @@ import React from "react";
 import LayoutContainer from "../../../components/commons/layout/LayoutContainer";
 import SignleProductMain from "../../../components/single_product/SignleProductMain";
 import { products_data } from "../../../fake_data/all_fakedata";
+import ErrorMessage from "../../../utilities/ErrorMEssage";
 
 export default function SingleProduct() {
   const router = useRouter();
@@ -12,15 +13,7 @@ export default function SingleProduct() {
   );
 
   const bread_string = `${single_product?.category} / ${single_product?.title}`;
-  if (!single_product) {
-    return (
-      <div className="flex items-center justify-center">
-        <h1 className="text-red-500 text-center text-big font-bold ">
-          Product not found!
-        </h1>
-      </div>
-    );
-  }
+
   return (
     <>
       <LayoutContainer

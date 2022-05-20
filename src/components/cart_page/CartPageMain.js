@@ -1,21 +1,23 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import ErrorMessage from "../../utilities/ErrorMEssage";
 import Breadcrumb from "../commons/Breadcrumb/Breadcrumb";
 import CartTable from "./CartTable";
 import CheckoutTable from "./CheckoutTable";
 
 export default function CartPageMain() {
   const carted_products = useSelector((state) => state.cart_product.cart_list);
+  const bread_string = "Cart";
+
   if (!carted_products.length) {
     return (
-      <div className="flex items-center justify-center">
-        <h1 className="text-red-500 text-center text-big font-bold ">
-          Cart is empty!
-        </h1>
-      </div>
+      <>
+        <Breadcrumb bread_nav={bread_string} />
+        <ErrorMessage message="Cart is empty!" />
+      </>
     );
   }
-  const bread_string = "Cart";
+
   return (
     <>
       <Breadcrumb bread_nav={bread_string} />

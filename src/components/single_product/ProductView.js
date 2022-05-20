@@ -41,23 +41,25 @@ export default function ProductView({ product }) {
           {product?.product_status}
         </h5>
         <div className="flex items-center my-7">
-          <div id="add_to_cart_action">
-            <button
-              id="qty_controller"
-              className="!shadow-md !bg-indigo-50"
-              onClick={() => setQty(qty - 1)}
-            >
-              -
-            </button>
-            <span id="cart_qty">{qty}</span>
-            <button
-              id="qty_controller"
-              className="!shadow-md !bg-indigo-50"
-              onClick={() => setQty(qty + 1)}
-            >
-              +
-            </button>
-          </div>
+          {product?.stock_available > 0 && (
+            <div id="add_to_cart_action">
+              <button
+                id="qty_controller"
+                className="!shadow-md !bg-indigo-50"
+                onClick={() => setQty(qty - 1)}
+              >
+                -
+              </button>
+              <span id="cart_qty">{qty}</span>
+              <button
+                id="qty_controller"
+                className="!shadow-md !bg-indigo-50"
+                onClick={() => setQty(qty + 1)}
+              >
+                +
+              </button>
+            </div>
+          )}
           <div id="add_to_cart_btn">
             {product?.stock_available > 0 ? (
               <button

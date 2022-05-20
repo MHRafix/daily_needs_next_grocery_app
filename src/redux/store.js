@@ -15,6 +15,9 @@ const masterReducer = (state, action) => {
         cart_product:
           state.cart_product.quantity + action.payload.cart_product.quantity,
       },
+      // update_cart: {
+      //   updated_cart_list: state.cart_product.quantity,
+      // },
     };
     return nextState;
   } else {
