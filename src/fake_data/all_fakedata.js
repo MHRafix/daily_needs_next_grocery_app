@@ -444,3 +444,348 @@ export const products_data = [
     product_status: "in-stock",
   },
 ];
+
+export const products_data2 = [
+  {
+    // _id: 113,
+    title: "Organic Sweet Corn",
+    slug: "organic-sweet-corn",
+    thumbnail: Product1,
+    prices: {
+      regular_price: 18.56,
+      sale_price: 14.99,
+    },
+    category: "Fruits & Vegetables",
+
+    reviews_ratings: [
+      {
+        rating: 4.7,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+      {
+        rating: 3.5,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+      {
+        rating: 3,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+    ],
+    stock_available: 33,
+    sold_quantity: 20,
+    additional_info: {
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hiMenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum.",
+      weight: "1kg",
+      tags: ["vegtables", "fruits"],
+    },
+    product_status: "in-stock",
+  },
+  {
+    // _id: 114,
+    title: "Native Organic Papaya",
+    slug: "native-organic-papaya",
+    thumbnail: Product2,
+    prices: {
+      regular_price: 13.56,
+      sale_price: 9.99,
+    },
+    category: "Fruits & Vegetables",
+
+    reviews_ratings: [
+      {
+        rating: 3.7,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+      {
+        rating: 3.5,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+      {
+        rating: 3,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+    ],
+    stock_available: 23,
+    sold_quantity: 10,
+    additional_info: {
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hiMenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum.",
+      weight: "1kg",
+      tags: ["green fruits", "fruits"],
+    },
+    product_status: "in-stock",
+  },
+  {
+    // _id: 115,
+    title: "Green Seedless Grapes",
+    slug: "green-seedless-grapes",
+    thumbnail: Product3,
+    prices: {
+      regular_price: 24.56,
+      sale_price: 19.99,
+    },
+    category: "Fruits & Vegetables",
+
+    reviews_ratings: [
+      {
+        rating: 3.7,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+      {
+        rating: 3.5,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+      {
+        rating: 5,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+    ],
+    stock_available: 23,
+    sold_quantity: 10,
+    additional_info: {
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hiMenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum.",
+      weight: "1kg",
+      tags: ["green fruits", "fruits"],
+    },
+    product_status: "in-stock",
+  },
+  {
+    // _id: 116,
+    title: "Organic Grape Tomatoes",
+    slug: "organic-grapes-tomatoes",
+    thumbnail: Product4,
+    prices: {
+      regular_price: 4.56,
+      sale_price: 2.99,
+    },
+    category: "Fruits & Vegetables",
+
+    reviews_ratings: [
+      {
+        rating: 3.7,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+      {
+        rating: 3.5,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+      {
+        rating: 5,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+    ],
+    stock_available: 23,
+    sold_quantity: 10,
+    additional_info: {
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hiMenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum.",
+      weight: "1kg",
+      tags: ["green fruits", "fruits"],
+    },
+    product_status: "in-stock",
+  },
+  {
+    // _id: 117,
+    title: "Organic Broccoli",
+    slug: "organic-broccoli",
+    thumbnail: Product5,
+    prices: {
+      regular_price: 1.56,
+      sale_price: 0.99,
+    },
+    category: "Fruits & Vegetables",
+
+    reviews_ratings: [
+      {
+        rating: 3.7,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+      {
+        rating: 3.5,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+      {
+        rating: 5,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+    ],
+    stock_available: 23,
+    sold_quantity: 10,
+    additional_info: {
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hiMenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum.",
+      weight: "1kg",
+      tags: ["green fruits", "fruits"],
+    },
+    product_status: "in-stock",
+  },
+  {
+    // _id: 118,
+    title: "Washed Sugar Snap Peas",
+    slug: "washed-sugar-snap-peas",
+    thumbnail: Product6,
+    prices: {
+      regular_price: 8.56,
+      sale_price: 5.99,
+    },
+    category: "Pet Care",
+
+    reviews_ratings: [
+      {
+        rating: 3.7,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+      {
+        rating: 3.5,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+      {
+        rating: 5,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+    ],
+    stock_available: 23,
+    sold_quantity: 10,
+    additional_info: {
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hiMenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum.",
+      weight: "1kg",
+      tags: ["green fruits", "fruits"],
+    },
+    product_status: "in-stock",
+  },
+  {
+    // _id: 119,
+    title: "Organic Strawberry",
+    slug: "organic-strawberry",
+    thumbnail: Product7,
+    prices: {
+      regular_price: 11.56,
+      sale_price: 10.0,
+    },
+    category: "Fruits & Vegetables",
+
+    reviews_ratings: [
+      {
+        rating: 3.7,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+      {
+        rating: 3.5,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+      {
+        rating: 5,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+    ],
+    stock_available: 23,
+    sold_quantity: 10,
+    additional_info: {
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hiMenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum.",
+      weight: "1kg",
+      tags: ["green fruits", "fruits"],
+    },
+    product_status: "in-stock",
+  },
+  {
+    // _id: 120,
+    title: "Organic Vegetable",
+    slug: "organic-vegetable",
+    thumbnail: Product8,
+    prices: {
+      regular_price: 11.56,
+      sale_price: 10.0,
+    },
+    category: "Fruits & Vegetables",
+
+    reviews_ratings: [
+      {
+        rating: 3.7,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+      {
+        rating: 3.5,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+      {
+        rating: 5,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+    ],
+    stock_available: 23,
+    sold_quantity: 10,
+    additional_info: {
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hiMenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum.",
+      weight: "1kg",
+      tags: ["green fruits", "fruits"],
+    },
+    product_status: "in-stock",
+  },
+  {
+    // _id: 121,
+    title: "Gold Creamer Potatoes",
+    slug: "gold-creamer-potatoes",
+    thumbnail: Product9,
+    prices: {
+      regular_price: 51.56,
+      sale_price: 0,
+    },
+    category: "Fruits & Vegetables",
+
+    reviews_ratings: [
+      {
+        rating: 3.7,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+      {
+        rating: 3.5,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+      {
+        rating: 5,
+        review:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, necessitatibus!",
+      },
+    ],
+    stock_available: 0,
+    sold_quantity: 10,
+    additional_info: {
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hiMenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum.",
+      weight: "1kg",
+      tags: ["green fruits", "fruits"],
+    },
+    product_status: "in-stock",
+  },
+];
