@@ -1,17 +1,12 @@
-import { useRouter } from "next/router";
 import React from "react";
 import LayoutContainer from "../../../components/commons/layout/LayoutContainer";
 import SignleProductMain from "../../../components/single_product/SignleProductMain";
-import { products_data } from "../../../fake_data/all_fakedata";
-import ErrorMessage from "../../../utilities/ErrorMEssage";
 
-export default function SingleProduct() {
-  const router = useRouter();
-  const { _id } = router.query;
-  const single_product = products_data.find(
-    (product) => Number(_id) === product._id
-  );
+export default function SingleProduct(props) {
+  // single product destructure from the props
+  const { single_product } = props;
 
+  // bread cruimb navigation making here
   const bread_string = `${single_product?.category} / ${single_product?.title}`;
 
   return (
@@ -29,16 +24,19 @@ export default function SingleProduct() {
   );
 }
 
-// export async function getServerSideProps(context) {
-//   const { params } = context;
-//   const { _id } = params;
+// get single product serverSideprops
+export async function getServerSideProps(context) {
+  // selected prodcut unique id
+  const { params } = context;
+  const { _id } = params;
 
-//   await db.connect();
-//   const product = await Product.findOne({ slug }).lean();
-//   await db.disconnect();
-//   return {
-//     props: {
-//       product: db.convertDocToObj(product),
-//     },
-//   };
-// }
+  // req for all prodcuts
+  const res = await fetch(`http://localhost:3000/api/getProducts`);
+  const products = await res.json();
+
+  // find single one which is selected
+  const single_product = products.find((product) => product._id === _id);
+
+  // return the selected product here
+  return { props: { single_product } };
+}

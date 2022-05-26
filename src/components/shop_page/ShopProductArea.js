@@ -7,7 +7,7 @@ import ProductCard from "../../utilities/ProductCard";
 export default function ShopProductArea({ products_data }) {
   const [grid, setGrid] = useState(true);
   // error page
-  if (!products_data.length) {
+  if (!products_data?.length) {
     return <ErrorMessage message="No product found!" />;
   }
   return (
@@ -47,7 +47,7 @@ export default function ShopProductArea({ products_data }) {
       <div className="shop_products">
         {grid ? (
           <>
-            {products_data.map((product) => (
+            {products_data?.map((product) => (
               <ProductCard key={product._id} product_data={product} />
             ))}
           </>

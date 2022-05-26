@@ -5,14 +5,14 @@ import CategorySlider from "./HomeSlider/CategoriesSlider/CategorySlider";
 import MiddleBanner from "./MiddleBanner/MiddleBanner";
 import SaleProductsMain from "./SaleProducts/SaleProductsMain";
 
-export default function HomeMain() {
+export default function HomeMain({ sale_products }) {
   return (
     <>
       <CategorySlider />
       <BannerSlider />
-      <SaleProductsMain />
+      <SaleProductsMain sale_products_data={sale_products} />
       <MiddleBanner />
-      <BestSaleProductsMain />
+      <BestSaleProductsMain sale_products_data={sale_products} />
     </>
   );
 }

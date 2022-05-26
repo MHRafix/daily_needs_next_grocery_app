@@ -2,11 +2,10 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import { products_data } from "../../../fake_data/all_fakedata";
 import ProductCard from "../../../utilities/ProductCard";
 import SectionTitle from "../../../utilities/SectionTitle";
 import SliderArrow from "../../../utilities/SliderArrow";
-export default function BestSaleProductsMain() {
+export default function BestSaleProductsMain({ sale_products_data }) {
   // slider arrows are import from utilities
   const { SampleNextArrow, SamplePrevArrow } = SliderArrow();
 
@@ -64,7 +63,7 @@ export default function BestSaleProductsMain() {
         <SectionTitle section_title="best selling products" percentage="20%" />
       </div>
       <Slider {...settings}>
-        {products_data.map((product) => (
+        {sale_products_data?.map((product) => (
           <ProductCard key={product._id} product_data={product} />
         ))}
       </Slider>

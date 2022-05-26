@@ -1,9 +1,8 @@
 import React from "react";
-import { products_data } from "../../fake_data/all_fakedata";
 import Breadcrumb from "../commons/Breadcrumb/Breadcrumb";
 import ShopArea from "./ShopArea";
 
-export default function ShopPageMain() {
+export default function ShopPageMain({ products_data }) {
   const bread_string = "Shop";
   return (
     <>
