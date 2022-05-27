@@ -4,7 +4,6 @@ import { FaTruckMoving } from "react-icons/fa";
 import { GiBeachBag } from "react-icons/gi";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useDispatch } from "react-redux";
-import SingleThumbnail from "../../images/products/p1.webp";
 import { handleAddToCart } from "../../utilities/handleCart";
 
 export default function ProductView({ product }) {
@@ -14,7 +13,7 @@ export default function ProductView({ product }) {
   return (
     <div className="single_product_view">
       <div className="image_wrapper">
-        <Image src={SingleThumbnail} alt="single_product_image" />
+        <Image src={product?.thumbnail_big} alt="single_product_image" />
       </div>
       <div className="product_details_wrapper">
         <span id="sale_badge" className="!text-light">

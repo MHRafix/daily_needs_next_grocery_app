@@ -62,10 +62,12 @@ module.exports = {
         orangee: "#ff934b",
         orangee_red: "#ff5e62",
         info_color: "#0cc5b7",
+        light_info_color: "#0ccfdd",
         light_red: "#fff1f0",
         deep_dark: "#c4bedd",
         light_blue: "#24a3b5",
         page_white: "#fef6d4",
+        bg_blue: "#eff7fa",
       },
       spacing: {
         1: "2px",

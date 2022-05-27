@@ -11,6 +11,16 @@ import CatImg6 from "../images/category_images/cat6.webp";
 import CatImg7 from "../images/category_images/cat7.webp";
 import CatImg8 from "../images/category_images/cat8.webp";
 import CatImg9 from "../images/category_images/cat9.webp";
+// thumbnail big image imports are here
+import ThumbnailBig1 from "../images/products/p1.webp";
+import ThumbnailBig2 from "../images/products/p2.webp";
+import ThumbnailBig3 from "../images/products/p3.webp";
+import ThumbnailBig4 from "../images/products/p4.webp";
+import ThumbnailBig5 from "../images/products/p5.webp";
+import ThumbnailBig6 from "../images/products/p6.webp";
+import ThumbnailBig7 from "../images/products/p7.webp";
+import ThumbnailBig8 from "../images/products/p8.webp";
+import ThumbnailBig9 from "../images/products/p9.webp";
 // products image import here
 import Product1 from "../images/products/product1.webp";
 import Product2 from "../images/products/product2.webp";
@@ -447,10 +457,10 @@ export const products_data = [
 
 export const products_data2 = [
   {
-    // _id: 113,
     title: "Organic Sweet Corn",
     slug: "organic-sweet-corn",
     thumbnail: Product1,
+    thumbnail_big: ThumbnailBig1,
     prices: {
       regular_price: 18.56,
       sale_price: 14.99,
@@ -489,6 +499,7 @@ export const products_data2 = [
     title: "Native Organic Papaya",
     slug: "native-organic-papaya",
     thumbnail: Product2,
+    thumbnail_big: ThumbnailBig2,
     prices: {
       regular_price: 13.56,
       sale_price: 9.99,
@@ -527,6 +538,7 @@ export const products_data2 = [
     title: "Green Seedless Grapes",
     slug: "green-seedless-grapes",
     thumbnail: Product3,
+    thumbnail_big: ThumbnailBig3,
     prices: {
       regular_price: 24.56,
       sale_price: 19.99,
@@ -565,6 +577,7 @@ export const products_data2 = [
     title: "Organic Grape Tomatoes",
     slug: "organic-grapes-tomatoes",
     thumbnail: Product4,
+    thumbnail_big: ThumbnailBig4,
     prices: {
       regular_price: 4.56,
       sale_price: 2.99,
@@ -603,6 +616,7 @@ export const products_data2 = [
     title: "Organic Broccoli",
     slug: "organic-broccoli",
     thumbnail: Product5,
+    thumbnail_big: ThumbnailBig5,
     prices: {
       regular_price: 1.56,
       sale_price: 0.99,
@@ -641,6 +655,7 @@ export const products_data2 = [
     title: "Washed Sugar Snap Peas",
     slug: "washed-sugar-snap-peas",
     thumbnail: Product6,
+    thumbnail_big: ThumbnailBig6,
     prices: {
       regular_price: 8.56,
       sale_price: 5.99,
@@ -679,6 +694,7 @@ export const products_data2 = [
     title: "Organic Strawberry",
     slug: "organic-strawberry",
     thumbnail: Product7,
+    thumbnail_big: ThumbnailBig7,
     prices: {
       regular_price: 11.56,
       sale_price: 10.0,
@@ -717,6 +733,7 @@ export const products_data2 = [
     title: "Organic Vegetable",
     slug: "organic-vegetable",
     thumbnail: Product8,
+    thumbnail_big: ThumbnailBig8,
     prices: {
       regular_price: 11.56,
       sale_price: 10.0,
@@ -755,6 +772,7 @@ export const products_data2 = [
     title: "Gold Creamer Potatoes",
     slug: "gold-creamer-potatoes",
     thumbnail: Product9,
+    thumbnail_big: ThumbnailBig9,
     prices: {
       regular_price: 51.56,
       sale_price: 0,

@@ -54,7 +54,7 @@
   }
 
   .cart_area {
-    @apply w-1/4;
+    @apply w-1/4 flex justify-end items-center;
   }
 
   .cart_badge {
@@ -303,6 +303,26 @@
   .shipping_calculate {
     @apply my-2;
   }
+
+  .mini_cart_wrapper {
+    @apply fixed top-0 right-0 bg-white shadow-lg w-3/12 h-screen !z-50;
+  }
+  .cart_header_area {
+    @apply bg-black p-2 px-1 flex justify-between items-center text-white font-semibold tracking-wide;
+  }
+
+  .cart_content_area {
+    @apply px-1 py-3 bg-bg_blue overflow-y-scroll;
+  }
+
+  .cart_item_wrapper {
+    @apply flex justify-between items-center bg-white shadow-sm rounded-md my-5 py-1.5 px-2;
+  }
+
+  .cart_footer_area {
+    @apply px-1;
+  }
+
   /* all btn css here */
   .btn {
     @apply bg-gradient-to-r from-orangee to-orangee_red;
@@ -323,6 +343,10 @@
   }
   #view_btn {
     @apply text-deep_cyan !capitalize hover:text-black2 hover:duration-300;
+  }
+
+  .location_pushBtn {
+    @apply p-1 bg-gradient-to-r from-orangee to-orangee_red w-full my-2 text-white tracking-wider;
   }
 }
 

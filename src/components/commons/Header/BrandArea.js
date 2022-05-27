@@ -2,14 +2,17 @@ import Image from "next/image";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
+import { FaUserCircle } from "react-icons/fa";
 import { MdShoppingCart } from "react-icons/md";
 import { useSelector } from "react-redux";
 import Logo from "../../../images/logo/logo.webp";
+import MiniCart from "../MiniCartArea/MiniCart/MiniCart";
 
 export default function BrandArea() {
   const cart_list = useSelector((state) => state.cart_product.cart_list);
 
   // search dynamic query setup here using handleSearch function
+  const [cartActive, setCartActive] = useState(false);
   const [keyword, setKeyword] = useState("");
   const router = useRouter();
   const handleSearch = (e) => {
@@ -46,18 +49,31 @@ export default function BrandArea() {
             </button>
           </div>
           <div className="cart_area">
-            <NextLink href="/cart_list" passHref>
+            <div
+              onClick={() => setCartActive(true)}
+              className="flex justify-end items-center text-white text-thin cursor-pointer"
+            >
+              <span className="cart_badge">
+                <MdShoppingCart />
+                <span className="cart_counter">{cart_list.length}</span>
+              </span>
+              My Cart
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <NextLink href="/my_account/login" passHref>
               <div className="flex justify-end items-center text-white text-thin cursor-pointer">
-                <span className="cart_badge">
-                  <MdShoppingCart />
-                  <span className="cart_counter">{cart_list.length}</span>
+                <span className="cart_badge !mr-0">
+                  <FaUserCircle />
                 </span>
-                My Cart
+                &nbsp; My Account
               </div>
             </NextLink>
           </div>
         </div>
       </div>
+      {cartActive && (
+        <MiniCart cart_products={cart_list} cartState={setCartActive} />
+      )}
     </div>
   );
 }
