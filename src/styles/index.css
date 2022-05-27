@@ -338,9 +338,7 @@
     color: #333;
     transition: 0.3s;
   }
-}
 
-@layer utilities {
   #stock_status_green {
     border: 1px solid #4eda92;
     border-radius: 2px;

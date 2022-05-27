@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BsFillGridFill } from "react-icons/bs";
 import { FaList } from "react-icons/fa";
-import ErrorMessage from "../../utilities/ErrorMEssage";
+import ErrorMessage from "../../utilities/ErrorMessage";
 import ProductCard from "../../utilities/ProductCard";
 
 export default function ShopProductArea({ products_data }) {
