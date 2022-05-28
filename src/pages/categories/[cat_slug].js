@@ -23,19 +23,33 @@ export default function CategoryShop({ matched_product }) {
 }
 
 // get category product serverSideprops
+// export async function getServerSideProps(context) {
+//   // selected prodcut unique id
+//   const { params } = context;
+//   const { cat_slug } = params;
+
+//   // req for all prodcuts
+//   const res = await fetch(`${process.env.ROOT_URI}/api/allproducts`);
+//   const products = await res.json();
+
+//   // filter category products which is selected
+//   const matched_product = products.filter(
+//     (product) => product.category === cat_slug
+//   );
+//   // return the filtered products here
+//   return { props: { matched_product } };
+// }
+
 export async function getServerSideProps(context) {
-  // selected prodcut unique id
   const { params } = context;
   const { cat_slug } = params;
 
-  // req for all prodcuts
-  const res = await fetch(`${process.env.ROOT_URI}/api/allproducts`);
-  const products = await res.json();
-
-  // filter category products which is selected
-  const matched_product = products.filter(
-    (product) => product.category === cat_slug
-  );
-  // return the filtered products here
-  return { props: { matched_product } };
+  await db.connect();
+  const product = await Product.findOne({ cat_slug }).lean();
+  await db.disconnect();
+  return {
+    props: {
+      product: db.convertDocToObj(product),
+    },
+  };
 }
