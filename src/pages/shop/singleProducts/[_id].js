@@ -31,7 +31,7 @@ export async function getServerSideProps(context) {
   const { _id } = params;
 
   // req for all prodcuts
-  const res = await fetch(`${process.env.ROOT_URI}/api/allroducts`);
+  const res = await fetch(`${process.env.ROOT_URI}/api/allproducts`);
   const products = await res.json();
 
   // find single one which is selected

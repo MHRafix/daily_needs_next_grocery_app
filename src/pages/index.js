@@ -15,7 +15,7 @@ export default function Home({ products }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(`${process.env.ROOT_URI}/api/allroducts`);
+  const res = await fetch(`${process.env.ROOT_URI}/api/allproducts`);
   const products = await res.json();
 
   // Pass data to the page via props
