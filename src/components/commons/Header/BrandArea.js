@@ -60,7 +60,7 @@ export default function BrandArea() {
               My Cart
             </div>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <NextLink href="/my_account/login" passHref>
+            <NextLink href="/my_account/my_acc" passHref>
               <div className="flex justify-end items-center text-white text-thin cursor-pointer">
                 <span className="cart_badge !mr-0">
                   <FaUserCircle />
@@ -71,9 +71,13 @@ export default function BrandArea() {
           </div>
         </div>
       </div>
-      {cartActive && (
-        <MiniCart cart_products={cart_list} cartState={setCartActive} />
-      )}
+      {/* {cartActive && ( */}
+      <MiniCart
+        cart_products={cart_list}
+        cartState={setCartActive}
+        cartActive={cartActive}
+      />
+      {/* )} */}
     </div>
   );
 }

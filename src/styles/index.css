@@ -304,9 +304,6 @@
     @apply my-2;
   }
 
-  .mini_cart_wrapper {
-    @apply fixed top-0 right-0 bg-white shadow-lg w-3/12 h-screen !z-50;
-  }
   .cart_header_area {
     @apply bg-black p-2 px-1 flex justify-between items-center text-white font-semibold tracking-wide;
   }
@@ -398,6 +395,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .mini_cart_wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: white;
+    height: 100vh;
+    z-index: 500;
+    width: 0%;
+    transition: width 0.8s;
+  }
+
+  .mini_cart_wrapper_active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: white;
+    height: 100vh;
+    z-index: 500;
+    width: 25%;
+    transition: width 0.8s;
   }
 
   .slider {

@@ -10,12 +10,12 @@ export default function Category({ cat_data }) {
     <NextLink href={`/categories/${cat_data?.cat_name}`} passHref>
       <div id="category_wrapper">
         {cat_slug === cat_data?.cat_name ? (
-          <input type="checkbox" id="category_input" checked />
+          <input type="checkbox" id="category_input" defaultChecked />
         ) : (
           <input type="checkbox" id="category_input" />
         )}
         &nbsp;&nbsp;
-        <lebel className="text-thin">{cat_data?.cat_name}</lebel>
+        <span className="text-thin">{cat_data?.cat_name}</span>
       </div>
     </NextLink>
   );

@@ -35,7 +35,7 @@ export default function ShopProductArea({ products_data }) {
         <div className="product_sorting">
           <select id="product_sorting">
             <option value="1">Sort by popularity</option>
-            <option value="2" selected>
+            <option value="2" defaultValue={1}>
               Sort by latest
             </option>
             <option value="3">Sort by average rating</option>

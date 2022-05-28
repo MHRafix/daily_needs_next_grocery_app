@@ -1,9 +1,7 @@
 import NextLink from "next/link";
 import React from "react";
-import animation from "../../../../utilities/animation";
 import CartItemCard from "./CartItemCard";
-export default function MiniCart({ cart_products, cartState }) {
-  animation();
+export default function MiniCart({ cart_products, cartState, cartActive }) {
   let total_amount = 0;
 
   if (cart_products) {
@@ -15,7 +13,13 @@ export default function MiniCart({ cart_products, cartState }) {
     }
   }
   return (
-    <div className="mini_cart_wrapper" data-aos="slide-left">
+    <div
+      className={
+        cartActive
+          ? "mini_cart_wrapper_active shadow-lg"
+          : "mini_cart_wrapper shadow-lg"
+      }
+    >
       <div className="cart_header_area">
         <div className="cart_header">
           My Cart &nbsp;&nbsp;
