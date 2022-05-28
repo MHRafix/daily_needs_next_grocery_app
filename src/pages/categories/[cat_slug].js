@@ -29,7 +29,7 @@ export async function getServerSideProps(context) {
   const { cat_slug } = params;
 
   // req for all prodcuts
-  const res = await fetch(`${process.env.ROOT_URI}/api/getProducts`);
+  const res = await fetch(`${process.env.ROOT_URI}/api/allroducts`);
   const products = await res.json();
 
   // filter category products which is selected
