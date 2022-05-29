@@ -10,7 +10,7 @@ export default function CartItemCard({ product }) {
       <div className="cart_thumbnail shadow-lg">
         <Image src={product?.thumbnail} alt="" width={80} height={80} />
       </div>
-      <div className="cart_product_content">
+      <div className="cart_product_content !text-left">
         <div id="stock_slae_badge">
           <div id="sale_badge">15%</div>
           <div
