@@ -35,14 +35,14 @@ export default function ProductCard({ product_data }) {
               <div id="stock_status_red"></div>
             )}
           </div>
-          <NextLink href={`/shop/singleProducts/${_id}`} passHref>
+          <NextLink href={`/shop/singleProducts/${slug}`} passHref>
             <div id="product_thumbnail">
               <Image src={thumbnail} alt="product_thumbnail" />
             </div>
           </NextLink>
         </div>
         <div id="card_body">
-          <NextLink href={`/shop/singleProducts/${_id}`} passHref>
+          <NextLink href={`/shop/singleProducts/${slug}`} passHref>
             <h3 id="product_title">{title}</h3>
           </NextLink>
           <h5 id="stock_status">

@@ -45,10 +45,10 @@ export default function SingleProduct(props) {
 
 export async function getServerSideProps(context) {
   const { params } = context;
-  const { _id } = params;
+  const { slug } = params;
 
   await db.connect();
-  const product = await Product.findOne({ _id }).lean();
+  const product = await Product.findOne({ slug }).lean();
   await db.disconnect();
   return {
     props: {

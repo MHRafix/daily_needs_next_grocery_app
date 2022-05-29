@@ -458,7 +458,7 @@ export const products_data = [
 export const products_data2 = [
   {
     title: "Organic Sweet Corn",
-    slug: "organic-sweet-corn",
+    slug: "organic-sweet-corn-6291f841c5462a01ac90a3a1",
     thumbnail: Product1,
     thumbnail_big: ThumbnailBig1,
     prices: {
@@ -497,7 +497,7 @@ export const products_data2 = [
   {
     // _id: 114,
     title: "Native Organic Papaya",
-    slug: "native-organic-papaya",
+    slug: "native-organic-papaya-6291f841c5462a01ac90a3a2",
     thumbnail: Product2,
     thumbnail_big: ThumbnailBig2,
     prices: {
@@ -536,7 +536,7 @@ export const products_data2 = [
   {
     // _id: 115,
     title: "Green Seedless Grapes",
-    slug: "green-seedless-grapes",
+    slug: "green-seedless-grapes-6291f841c5462a01ac90a3a3",
     thumbnail: Product3,
     thumbnail_big: ThumbnailBig3,
     prices: {
@@ -575,7 +575,7 @@ export const products_data2 = [
   {
     // _id: 116,
     title: "Organic Grape Tomatoes",
-    slug: "organic-grapes-tomatoes",
+    slug: "organic-grapes-tomatoes-6291f841c5462a01ac90a3a4",
     thumbnail: Product4,
     thumbnail_big: ThumbnailBig4,
     prices: {
@@ -614,7 +614,7 @@ export const products_data2 = [
   {
     // _id: 117,
     title: "Organic Broccoli",
-    slug: "organic-broccoli",
+    slug: "organic-broccoli-6291f841c5462a01ac90a3a5",
     thumbnail: Product5,
     thumbnail_big: ThumbnailBig5,
     prices: {
@@ -653,7 +653,7 @@ export const products_data2 = [
   {
     // _id: 118,
     title: "Washed Sugar Snap Peas",
-    slug: "washed-sugar-snap-peas",
+    slug: "washed-sugar-snap-peas-6291f841c5462a01ac90a3a6",
     thumbnail: Product6,
     thumbnail_big: ThumbnailBig6,
     prices: {
@@ -692,7 +692,7 @@ export const products_data2 = [
   {
     // _id: 119,
     title: "Organic Strawberry",
-    slug: "organic-strawberry",
+    slug: "organic-strawberry-6291f841c5462a01ac90a3a7",
     thumbnail: Product7,
     thumbnail_big: ThumbnailBig7,
     prices: {
@@ -731,7 +731,7 @@ export const products_data2 = [
   {
     // _id: 120,
     title: "Organic Vegetable",
-    slug: "organic-vegetable",
+    slug: "organic-vegetable-6291f841c5462a01ac90a3a8",
     thumbnail: Product8,
     thumbnail_big: ThumbnailBig8,
     prices: {
@@ -770,7 +770,7 @@ export const products_data2 = [
   {
     // _id: 121,
     title: "Gold Creamer Potatoes",
-    slug: "gold-creamer-potatoes",
+    slug: "gold-creamer-potatoes-6291f841c5462a01ac90a3a9",
     thumbnail: Product9,
     thumbnail_big: ThumbnailBig9,
     prices: {

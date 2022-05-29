@@ -48,11 +48,14 @@ export async function getServerSideProps(context) {
   const { search_slug } = params;
 
   await db.connect();
-  const product = await Product.findOne({ search_slug }).lean();
+  const products = await Product.find({}).lean();
+  const matched_product = products.filter((product) =>
+    product.title.toLowerCase().includes(search_slug.toLowerCase())
+  );
   await db.disconnect();
   return {
     props: {
-      product: db.convertDocToObj(product),
+      product: db.convertDocToObj(matched_product),
     },
   };
 }

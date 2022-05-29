@@ -45,11 +45,11 @@ export async function getServerSideProps(context) {
   const { cat_slug } = params;
 
   await db.connect();
-  const product = await Product.findOne({ cat_slug }).lean();
+  const products = await Product.find({ category: cat_slug }).lean();
   await db.disconnect();
   return {
     props: {
-      product: db.convertDocToObj(product),
+      product: db.convertDocToObj(products),
     },
   };
 }
