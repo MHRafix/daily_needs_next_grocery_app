@@ -52,7 +52,7 @@ export async function getServerSideProps(context) {
   await db.disconnect();
   return {
     props: {
-      product: product,
+      single_product: product,
     },
   };
 }
