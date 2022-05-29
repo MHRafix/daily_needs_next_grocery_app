@@ -1,16 +1,16 @@
-import nc from "next-connect";
-import Product from "../../../../models/Products";
-import db from "../../../utilities/database";
+// import nc from "next-connect";
+// import Product from "../../../../models/Products";
+// import db from "../../../utilities/database";
 
-// products getting function here
-const handler = nc();
+// // products getting function here
+// const handler = nc();
 
-handler.get(async (req, res) => {
-  await db.connect();
-  const products = await Product.find({});
-  await db.disconnect();
-  res.json(products);
-});
+// handler.get(async (req, res) => {
+//   await db.connect();
+//   const products = await Product.find({});
+//   await db.disconnect();
+//   res.json(products);
+// });
 
-// function export here
-export default handler;
+// // function export here
+// export default handler;
