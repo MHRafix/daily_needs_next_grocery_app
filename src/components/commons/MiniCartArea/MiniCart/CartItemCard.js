@@ -21,7 +21,7 @@ export default function CartItemCard({ product }) {
           </div>
         </div>
         <div className="title_price_amount">
-          <NextLink href={`/shop/singleProducts/${product?._id}`} passHref>
+          <NextLink href={`/shop/singleProducts/${product?.slug}`} passHref>
             <h3
               id="product_title"
               className="!text-thin !font-light !text-slate-600"
