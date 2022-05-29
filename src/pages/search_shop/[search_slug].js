@@ -5,7 +5,7 @@ import LayoutContainer from "../../components/commons/layout/LayoutContainer";
 import SearchShopMain from "../../components/search_shop/SearchShopMain";
 import db from "../../utilities/database";
 
-export default function SearchProduct({ matched_product }) {
+export default function SearchProduct({ matched_products }) {
   const router = useRouter();
   const { search_slug } = router.query;
   const bread_string = `Categories / ${search_slug}`;
@@ -17,7 +17,7 @@ export default function SearchProduct({ matched_product }) {
       >
         <SearchShopMain
           bread_string={bread_string}
-          searched_products={matched_product}
+          searched_products={matched_products}
         />
       </LayoutContainer>
     </>
@@ -49,13 +49,13 @@ export async function getServerSideProps(context) {
 
   await db.connect();
   const products = await Product.find({}).lean();
-  const matched_product = products.filter((product) =>
+  const matched_products = products.filter((product) =>
     product.title.toLowerCase().includes(search_slug.toLowerCase())
   );
   await db.disconnect();
   return {
     props: {
-      product: products.map(db.convertDocToObj),
+      matched_products: matched_products.map(db.convertDocToObj),
     },
   };
 }

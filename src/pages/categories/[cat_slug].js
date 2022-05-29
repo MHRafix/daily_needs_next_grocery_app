@@ -5,7 +5,7 @@ import CategoryShopMain from "../../components/category_shop/CategoryShopMain";
 import LayoutContainer from "../../components/commons/layout/LayoutContainer";
 import db from "../../utilities/database";
 
-export default function CategoryShop({ matched_product }) {
+export default function CategoryShop({ matched_products }) {
   const router = useRouter();
   const { cat_slug } = router.query;
   const bread_string = `Categories / ${cat_slug}`;
@@ -17,7 +17,7 @@ export default function CategoryShop({ matched_product }) {
       >
         <CategoryShopMain
           bread_string={bread_string}
-          category_products={matched_product}
+          category_products={matched_products}
         />
       </LayoutContainer>
     </>
@@ -47,11 +47,11 @@ export async function getServerSideProps(context) {
   const { cat_slug } = params;
 
   await db.connect();
-  const products = await Product.find({ category: cat_slug }).lean();
+  const matched_products = await Product.find({ category: cat_slug }).lean();
   await db.disconnect();
   return {
     props: {
-      product: products.map(db.convertDocToObj),
+      matched_products: matched_products.map(db.convertDocToObj),
     },
   };
 }
