@@ -9,6 +9,7 @@ import { handleAddToCart } from "../utilities/handleCart";
 export default function ProductCard({ product_data }) {
   const {
     _id,
+    slug,
     title,
     thumbnail,
     prices,

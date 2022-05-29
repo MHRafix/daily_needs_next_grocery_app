@@ -1,7 +1,9 @@
 import { useRouter } from "next/router";
 import React from "react";
+import Product from "../../../models/Products";
 import CategoryShopMain from "../../components/category_shop/CategoryShopMain";
 import LayoutContainer from "../../components/commons/layout/LayoutContainer";
+import db from "../../utilities/database";
 
 export default function CategoryShop({ matched_product }) {
   const router = useRouter();
