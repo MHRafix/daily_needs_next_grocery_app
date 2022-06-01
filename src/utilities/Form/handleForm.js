@@ -14,7 +14,7 @@ export default function handleForm(user_info, cnfPassword, api_url) {
       if (user_info?.user_password === cnfPassword) {
         if (user_info?.user_password.length > 5) {
           const { data } = await axios.post(
-            `http://localhost:3000/api/${api_url}`,
+            `https://daily-need.vercel.app/api/${api_url}`,
             user_info
           );
 
