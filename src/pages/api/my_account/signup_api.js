@@ -7,7 +7,6 @@ import db from "../../../utilities/database";
 const handler = nc();
 handler.post(async (req, res) => {
   await db.connect();
-
   const all_users = await User.find({});
   const exist = all_users.find(
     (user) => user.user_email === req.body.user_email

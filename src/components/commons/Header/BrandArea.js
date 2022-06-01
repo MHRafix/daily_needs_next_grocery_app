@@ -1,3 +1,4 @@
+import Cookie from "js-cookie";
 import Image from "next/image";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
@@ -22,6 +23,11 @@ export default function BrandArea() {
       router.push(`/search_shop/${keyword}`);
     }
   };
+
+  // logged in user data here
+  const user_loggedin =
+    Cookie.get("user_information") &&
+    JSON.parse(Cookie.get("user_information"));
 
   return (
     <div className="brand_area_wrapper">
@@ -60,7 +66,12 @@ export default function BrandArea() {
               My Cart
             </div>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <NextLink href="/my_account/my_acc" passHref>
+            <NextLink
+              href={
+                user_loggedin ? "/my_account/my_profile" : "/my_account/my_acc"
+              }
+              passHref
+            >
               <div className="flex justify-end items-center text-white text-thin cursor-pointer">
                 <span className="cart_badge !mr-0">
                   <FaUserCircle />
