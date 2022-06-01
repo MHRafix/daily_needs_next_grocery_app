@@ -1,5 +1,5 @@
 import React from "react";
-import ErrorMessage from "../../utilities/ErrorMessage";
+import { ErrorMessage } from "../../utilities/AlertMessage";
 import Breadcrumb from "../commons/Breadcrumb/Breadcrumb";
 import AdditonalInfo from "./AdditonalInfo";
 import ProductView from "./ProductView";

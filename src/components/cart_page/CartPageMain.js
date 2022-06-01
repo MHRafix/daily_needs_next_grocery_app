@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import ErrorMessage from "../../utilities/ErrorMessage";
+import { ErrorMessage } from "../../utilities/AlertMessage";
 import Breadcrumb from "../commons/Breadcrumb/Breadcrumb";
 import CartTable from "./CartTable";
 import CheckoutTable from "./CheckoutTable";
