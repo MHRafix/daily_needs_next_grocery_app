@@ -35,11 +35,11 @@ export default function CategoryShop({ matched_products }) {
 //   const products = await res.json();
 
 //   // filter category products which is selected
-//   const matched_product = products.filter(
+//   const matched_products = products.filter(
 //     (product) => product.category === cat_slug
 //   );
 //   // return the filtered products here
-//   return { props: { matched_product } };
+//   return { props: { matched_products } };
 // }
 
 export async function getServerSideProps(context) {

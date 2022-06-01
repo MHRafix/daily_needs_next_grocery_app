@@ -33,14 +33,9 @@ export async function getServerSideProps() {
   };
 }
 
-/******* fetch from next get api server
- * 
- * 
- * 
-export async function getServerSideProps() {
-  const res = await fetch(`${process.env.ROOT_URI}/api/allproducts`);
-  const products = await res.json();
+// export async function getServerSideProps() {
+//   const res = await fetch(`${process.env.ROOT_URI}/api/allproducts`);
+//   const products = await res.json();
 
-  return { props: { products } };
-} 
-*/
+//   return { props: { products } };
+// }

@@ -1299,10 +1299,10 @@
   "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz"
   "version" "3.6.0"
 
-"js-cookies@^1.0.4":
-  "integrity" "sha1-1G5XbEIP9tVULA9SttTvfWN+dU4="
-  "resolved" "https://registry.npmjs.org/js-cookies/-/js-cookies-1.0.4.tgz"
-  "version" "1.0.4"
+"js-cookie@^3.0.1":
+  "integrity" "sha512-+0rgsUXZu4ncpPxRL+lNEptWMOWl9etvPHc/koSRp6MPwpRYAhmk0dUG00J4bxVV3r9uUzfo24wW0knS07SKSw=="
+  "resolved" "https://registry.npmjs.org/js-cookie/-/js-cookie-3.0.1.tgz"
+  "version" "3.0.1"
 
 "js-tokens@^3.0.0 || ^4.0.0":
   "integrity" "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="

@@ -27,11 +27,15 @@
   }
 
   .layout_two {
-    @apply grid-rows-1 grid-cols-2;
+    /* @apply grid-rows-1 md:grid-cols-2 sm:grid-cols-1; */
+    @apply grid-rows-1 md:grid-cols-2 sm:grid-cols-1 gap-10;
   }
 
+  .annoucement_area {
+    @apply flex md:justify-start items-center;
+  }
   .account_area {
-    @apply flex justify-end items-center;
+    @apply flex md:justify-end sm:!justify-center items-center;
   }
 
   .brand_area_wrapper {
@@ -66,7 +70,7 @@
   }
 
   .navigation_wrapper {
-    @apply border-b-zinc-600 py-1.5 md:block;
+    @apply border-b-zinc-600 py-1.5 sm:!block xs:hidden;
   }
 
   .navbars {
@@ -320,6 +324,33 @@
     @apply px-1;
   }
 
+  /* my account page css here */
+
+  #form_layout_wrapper {
+    @apply shadow-lg rounded-lg px-3 py-1.5;
+  }
+  #form_name {
+    @apply my-5;
+  }
+  #form_name_title {
+    @apply text-medium_light font-bold text-black tracking-wide capitalize;
+  }
+
+  #field_wrapper {
+    @apply my-5;
+  }
+
+  #input_label {
+    @apply text-sm capitalize tracking-wider text-black3;
+  }
+
+  #required_sign {
+    @apply text-red-400 text-medium;
+  }
+
+  #field_input {
+    @apply px-extra_padding2 py-extra_padding4 border border-slate-200 rounded-sm outline-none w-full my-2 text-light tracking-wide text-black2;
+  }
   /* all btn css here */
   .btn {
     @apply bg-gradient-to-r from-orangee to-orangee_red;
@@ -334,6 +365,10 @@
   }
   #cart_btn {
     @apply bg-gradient-to-r from-orangee to-orangee_red flex justify-center items-center mx-auto mt-4 text-white px-1.1 py-extra_padding3 rounded-full text-thin;
+  }
+
+  #form_btn {
+    @apply bg-gradient-to-r from-orangee to-orangee_red flex justify-center items-center text-white px-1.5 py-1 rounded-sm text-sm tracking-wider font-light;
   }
   #qty_controller {
     @apply w-12 h-12 rounded-full bg-white text-black3 flex justify-center items-center hover:bg-gradient-to-r from-orangee to-orangee_red hover:text-white;

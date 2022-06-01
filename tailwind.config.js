@@ -11,6 +11,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "350px",
+      },
       width: {
         1: "50px",
         2: "60px",
@@ -102,6 +105,7 @@ module.exports = {
         extra_padding2: "4px",
         extra_padding: "5px",
         extra_padding3: "6px",
+        extra_padding4: "8px",
         1: "10px",
         1.1: "11px",
         1.2: "12px",

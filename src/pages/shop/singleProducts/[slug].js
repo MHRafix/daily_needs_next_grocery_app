@@ -30,14 +30,14 @@ export default function SingleProduct(props) {
 // export async function getServerSideProps(context) {
 //   // selected prodcut unique id
 //   const { params } = context;
-//   const { _id } = params;
+//   const { slug } = params;
 
 //   // req for all prodcuts
 //   const res = await fetch(`${process.env.ROOT_URI}/api/allproducts`);
 //   const products = await res.json();
 
 //   // find single one which is selected
-//   const single_product = products.find((product) => product._id === _id);
+//   const single_product = products.find((product) => product.slug === slug);
 
 //   // return the selected product here
 //   return { props: { single_product } };
