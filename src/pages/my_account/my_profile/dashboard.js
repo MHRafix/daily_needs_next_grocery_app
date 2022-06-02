@@ -1,8 +1,8 @@
 import React from "react";
-import LayoutContainer from "../../components/commons/layout/LayoutContainer";
-import MyProfileMain from "../../components/my_profile_page/MyProfileMain";
+import LayoutContainer from "../../../components/commons/layout/LayoutContainer";
+import MyProfileMain from "../../../components/my_profile_page/my_profile_dashboard/MyProfileMain";
 
-export default function my_profile() {
+export default function Dashboard() {
   return (
     <>
       <LayoutContainer

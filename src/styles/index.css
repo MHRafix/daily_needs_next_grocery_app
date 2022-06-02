@@ -14,7 +14,7 @@
   }
 
   .container_wrapper {
-    @apply w-per_9 mx-auto px-1.5;
+    @apply md:w-per_9 mx-auto px-1.5;
   }
 
   /* header css here */
@@ -327,7 +327,7 @@
   /* my account page css here */
 
   #form_layout_wrapper {
-    @apply shadow-lg rounded-lg px-3 py-1.5;
+    @apply shadow-lg rounded-lg md:px-3 xs:px-1.5 py-1.5;
   }
   #form_name {
     @apply my-5;
@@ -351,6 +351,35 @@
   #field_input {
     @apply px-extra_padding2 py-extra_padding4 border border-slate-200 rounded-sm outline-none w-full my-2 text-light tracking-wide text-black2;
   }
+
+  /* my profile page css here */
+  .my_profile_navigation {
+    @apply md:w-1/4 py-2 md:border  md:border-white md:border-r-slate-300;
+  }
+
+  .my_profile_content_body {
+    @apply md:w-3/4;
+  }
+
+  .profile_details {
+    @apply text-center mb-10 px-3;
+  }
+
+  .profile_navigation_wrapper {
+    @apply p-1.5;
+  }
+
+  #profile_nav_normal {
+    @apply flex items-center border border-slate-200 rounded-sm py-extra_padding4 px-1 capitalize tracking-wide lg:text-light my-1 cursor-pointer hover:bg-gradient-to-r from-orangee to-orangee_red hover:text-white hover:duration-300;
+  }
+
+  #profile_nav_active {
+    @apply flex items-center border border-slate-200 rounded-sm py-extra_padding4 px-1 capitalize tracking-wide lg:text-light my-1 cursor-pointer bg-gradient-to-r from-orangee to-orangee_red text-white;
+  }
+
+  .content_body_wrapper {
+    @apply py-2 px-3;
+  }
   /* all btn css here */
   .btn {
     @apply bg-gradient-to-r from-orangee to-orangee_red;
@@ -363,6 +392,7 @@
   .btn-search {
     @apply h-init w-5 text-white rounded-tr-sm rounded-br-sm tracking-widest;
   }
+
   #cart_btn {
     @apply bg-gradient-to-r from-orangee to-orangee_red flex justify-center items-center mx-auto mt-4 text-white px-1.1 py-extra_padding3 rounded-full text-thin;
   }

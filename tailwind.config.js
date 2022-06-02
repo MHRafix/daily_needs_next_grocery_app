@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        xs: "350px",
+        xs: "310px",
       },
       width: {
         1: "50px",
@@ -29,6 +29,7 @@ module.exports = {
         per_7: "70%",
         per_8: "80%",
         per_9: "90%",
+        per_98: "98%",
         per_10: "100%",
       },
       height: {

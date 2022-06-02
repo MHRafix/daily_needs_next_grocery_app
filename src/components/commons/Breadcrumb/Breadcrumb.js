@@ -7,7 +7,7 @@ export default function Breadcrumb({ bread_nav }) {
       <NextLink href="/" passHref>
         <span className="home_nav">Home </span>
       </NextLink>
-      <span className="rest_all-nav">/ {bread_nav}</span>
+      <span className="tracking-wider capitalize">/ {bread_nav}</span>
     </div>
   );
 }

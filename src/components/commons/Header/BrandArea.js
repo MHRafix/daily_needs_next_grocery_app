@@ -68,7 +68,9 @@ export default function BrandArea() {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <NextLink
               href={
-                user_loggedin ? "/my_account/my_profile" : "/my_account/my_acc"
+                user_loggedin
+                  ? "/my_account/my_profile/dashboard"
+                  : "/my_account/my_acc"
               }
               passHref
             >

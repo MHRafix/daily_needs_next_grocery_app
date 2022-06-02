@@ -1,4 +1,8 @@
 // category image import here
+import { BsClockHistory } from "react-icons/bs";
+import { FiEdit } from "react-icons/fi";
+import { MdManageSearch, MdOutlineDashboard } from "react-icons/md";
+// icons import from react-icons here
 import CatImg1 from "../images/category_images/cat1.webp";
 import CatImg10 from "../images/category_images/cat10.webp";
 import CatImg11 from "../images/category_images/cat11.webp";
@@ -41,6 +45,34 @@ export const header_navigation = [
   { _id: 5, menu_name: "blog", href: "/blog" },
   { _id: 6, menu_name: "FAQ", href: "/faq" },
   { _id: 7, menu_name: "contact", href: "/contact" },
+];
+
+// header navigation menus fake data here
+export const profile_navigation = [
+  {
+    _id: 1,
+    menu_name: "dashboard",
+    href: "/dashboard",
+    menu_icon: <MdOutlineDashboard />,
+  },
+  {
+    _id: 2,
+    menu_name: "my all orders",
+    href: "/my_all_orders",
+    menu_icon: <MdManageSearch />,
+  },
+  {
+    _id: 3,
+    menu_name: "history download",
+    href: "/history_download",
+    menu_icon: <BsClockHistory />,
+  },
+  {
+    _id: 4,
+    menu_name: "edit account",
+    href: "/edit_account",
+    menu_icon: <FiEdit />,
+  },
 ];
 
 // categories fake data here
