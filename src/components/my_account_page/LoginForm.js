@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ErrorMessage, SuccessMessage } from "../../utilities/AlertMessage";
+import { ErrorAlert, SuccessMessage } from "../../utilities/AlertMessage";
 import { FormButton, FormTextField } from "../../utilities/Form/FormField";
 import handleForm from "../../utilities/Form/handleForm";
 
@@ -28,7 +28,7 @@ export default function LoginForm() {
     <form onSubmit={handleFormSubmit}>
       {/* message alert */}
       {success && <SuccessMessage message={success} />}
-      {error && <ErrorMessage message={error} />}
+      {error && <ErrorAlert message={error} />}
 
       <FormTextField
         form_label="your email"

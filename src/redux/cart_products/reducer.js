@@ -5,6 +5,8 @@ import {
   reduceCartProduct,
 } from "./action";
 
+// carted_products ? carted_products : [],
+
 const initialState = {
   cart_list: [],
 };

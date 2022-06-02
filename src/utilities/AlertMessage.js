@@ -4,6 +4,14 @@ import { MdCloudDone } from "react-icons/md";
 
 export const ErrorMessage = ({ message }) => {
   return (
+    <div className="text-red-500 text-medium_light font-bold text-center tracking-wider">
+      <h1>{message}</h1>
+    </div>
+  );
+};
+
+export const ErrorAlert = ({ message }) => {
+  return (
     <div
       style={{ padding: "10px" }}
       className="text-white bg-red-500 text-medium_light text-left tracking-wider rounded-sm"
