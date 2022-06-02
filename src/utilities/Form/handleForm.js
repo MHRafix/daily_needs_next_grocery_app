@@ -7,6 +7,7 @@ export default function handleForm(user_info, cnfPassword, api_url) {
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
   const router = useRouter();
+  const { redirect } = router.query;
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -27,11 +28,7 @@ export default function handleForm(user_info, cnfPassword, api_url) {
               sameSite: "strict",
               path: "/",
             });
-
-            // after created account page redirect to the home page
-            // setTimeout(() => {
-            //   router.push("/");
-            // }, 3000);
+            router.push(redirect || "/");
           } else {
             setSuccess("");
             setError(data.error);
