@@ -3,7 +3,7 @@ import ProfileNavigation from "./ProfileNavigation";
 
 export default function ProfileContentContainer({ children }) {
   return (
-    <div className="md:flex sm:!grid shadow-lg rounded-md">
+    <div className="md:flex shadow-lg rounded-md">
       <div className="my_profile_navigation">
         <ProfileNavigation />
       </div>
