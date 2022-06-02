@@ -4,7 +4,7 @@ import { MdCloudDone } from "react-icons/md";
 
 export const ErrorMessage = ({ message }) => {
   return (
-    <div className="text-red-500 text-medium_light !font-bold text-center tracking-wider">
+    <div className="text-red-500 text-big_ultra !font-bold text-center tracking-wider">
       <h1 style={{ fontWeight: "bold!important" }}>{message}</h1>
     </div>
   );
