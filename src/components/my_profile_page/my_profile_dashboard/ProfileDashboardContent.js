@@ -1,4 +1,5 @@
 import React from "react";
+import DataChart from "../../../utilities/GraphChart/DataChart";
 import ProfileContentLayout from "../../../utilities/ProfileContentLayout";
 
 export default function ProfileDashboardContent() {
@@ -25,6 +26,14 @@ export default function ProfileDashboardContent() {
             </div>
           </div>
           {/* topbar purchase summary end here */}
+          <div className="purchased_chart_and_payment_table_wrapper">
+            <div className="purchased_chart_wrapper">
+              <DataChart />
+            </div>
+            <div className="payment_table_wrapper">
+              Payment data table will be here...!
+            </div>
+          </div>
         </div>
       </ProfileContentLayout>
     </>

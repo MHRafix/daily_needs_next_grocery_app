@@ -409,6 +409,9 @@
     @apply capitalize text-sm tracking-wide;
   }
 
+  .purchased_chart_and_payment_table_wrapper {
+    @apply grid grid-rows-1 grid-cols-2 mt-15;
+  }
   /* all btn css here */
   .btn {
     @apply bg-gradient-to-r from-orangee to-orangee_red;

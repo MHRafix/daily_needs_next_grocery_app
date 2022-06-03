@@ -11,6 +11,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "bcryptjs": "^2.4.3",
+    "chart.js": "^3.8.0",
     "formik": "^2.2.9",
     "js-cookie": "^3.0.1",
     "jsonwebtoken": "^8.5.1",
@@ -21,6 +22,7 @@
     "next-wrapper": "^0.0.3",
     "prop-types": "^15.8.1",
     "react": "18.1.0",
+    "react-chartjs-2": "^4.1.0",
     "react-dom": "18.1.0",
     "react-icons": "^4.3.1",
     "react-redux": "^8.0.1",
