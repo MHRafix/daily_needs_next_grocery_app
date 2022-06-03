@@ -1,8 +1,71 @@
 import React from "react";
+import CardData from "../../../utilities/CardData";
 import DataChart from "../../../utilities/GraphChart/DataChart";
 import ProfileContentLayout from "../../../utilities/ProfileContentLayout";
+import { card_fake_data } from "../../../utilities/React_Table/Data_Tables.js/table_data";
 
 export default function ProfileDashboardContent() {
+  //data for bar chart
+  const data = {
+    labels: [
+      "Jun-1",
+      "Jun-2",
+      "Jun-3",
+      "Jun-4",
+      "Jun-5",
+      "Jun-6",
+      "Jun-7",
+      "Jun-8",
+      "Jun-9",
+      "Jun-10",
+      "Jun-11",
+      "Jun-12",
+      "Jun-13",
+      "Jun-14",
+      "Jun-15",
+      "Jun-16",
+      "Jun-17",
+      "Jun-18",
+      "Jun-19",
+      "Jun-20",
+      "Jun-21",
+      "Jun-22",
+      "Jun-23",
+      "Jun-24",
+      "Jun-25",
+      "Jun-26",
+      "Jun-27",
+      "Jun-28",
+      "Jun-29",
+      "Jun-30",
+    ],
+    label: "Purchased Chart",
+    datasets: [
+      {
+        fill: true,
+        lineTension: 0.1,
+        backgroundColor: "rgba(75,192,192,1)",
+        borderColor: "rgba(75,192,192,1)",
+        borderCapStyle: "butt",
+        borderDash: [],
+        borderDashOffset: 0.0,
+        borderJoinStyle: "miter",
+        pointBorderColor: "rgba(75,192,192,1)",
+        pointBackgroundColor: "rgb(40 214 148)",
+        pointBorderWidth: 0,
+        pointHoverRadius: 0,
+        pointHoverBackgroundColor: "rgb(40 214 148)",
+        pointHoverBorderColor: "rgb(40 214 148)",
+        pointHoverBorderWidth: 0,
+        pointRadius: 0,
+        pointHitRadius: 0,
+        data: [
+          65, 59, 80, 81, 56, 55, 40, 57, 40, 48, 59, 62, 65, 59, 55, 40, 57,
+          40, 48, 1, 62, 55, 40, 57, 40, 48, 59, 100, 110, 140, 150,
+        ],
+      },
+    ],
+  };
   return (
     <>
       <ProfileContentLayout content_title="profile dashboard">
@@ -28,10 +91,17 @@ export default function ProfileDashboardContent() {
           {/* topbar purchase summary end here */}
           <div className="purchased_chart_and_payment_table_wrapper">
             <div className="purchased_chart_wrapper">
-              <DataChart />
+              <h1 className="dashboard_content_title">{data.label}</h1>
+
+              <DataChart data={data} />
             </div>
-            <div className="payment_table_wrapper">
-              Payment data table will be here...!
+            <div className="purchased_data_table_wrapper">
+              <h1 className="dashboard_content_title">Payment Card</h1>
+              <div id="card_data_table" className="overflow-y-scroll h-per_86">
+                {card_fake_data.map((card) => (
+                  <CardData key={card._id} card_data={card} />
+                ))}
+              </div>
             </div>
           </div>
         </div>

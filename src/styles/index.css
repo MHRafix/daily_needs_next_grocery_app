@@ -410,8 +410,29 @@
   }
 
   .purchased_chart_and_payment_table_wrapper {
-    @apply grid grid-rows-1 grid-cols-2 mt-15;
+    @apply grid grid-rows-1 md:grid-cols-2 mt-15 gap-10;
   }
+
+  .purchased_chart_wrapper {
+    @apply shadow-md rounded-md h-per_4;
+  }
+
+  .purchased_data_table_wrapper {
+    @apply shadow-md rounded-md h-per_4;
+  }
+
+  .dashboard_content_title {
+    @apply text-light text-black2 tracking-wide font-semibold bg-slate-100 p-1;
+  }
+
+  #payment_card_table {
+    @apply flex items-center justify-between p-1 cursor-pointer rounded-sm hover:bg-slate-100 hover:duration-500;
+  }
+
+  #card_info {
+    @apply text-left text-thin capitalize text-black3 w-1/4;
+  }
+
   /* all btn css here */
   .btn {
     @apply bg-gradient-to-r from-orangee to-orangee_red;
@@ -445,6 +466,38 @@
 }
 
 @layer utilities {
+  html {
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+  }
+
+  #card_data_table::-webkit-scrollbar {
+    width: 0.2rem;
+  }
+
+  #card_data_table::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  #card_data_table::-webkit-scrollbar-thumb {
+    background: #0cc5b7;
+    border-radius: 5rem;
+  }
+
+  html::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  html::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background: var(--btn-bg);
+    border-radius: 5rem;
+  }
+
   button.view_btn {
     color: #0cc5b7;
     text-transform: capitalize;
