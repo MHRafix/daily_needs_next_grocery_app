@@ -20,6 +20,7 @@ module.exports = {
         3: "70px",
         4: "80px",
         5: "90px",
+        10: "110px",
         per_1: "10%",
         per_2: "20%",
         per_3: "30%",
@@ -33,6 +34,7 @@ module.exports = {
         per_10: "100%",
       },
       height: {
+        0: "1px",
         init: "42.5px",
         1: "50px",
         2: "60px",
@@ -50,6 +52,14 @@ module.exports = {
         per_8: "80%",
         per_9: "90%",
         per_10: "100%",
+      },
+      borderWidth: {
+        1: "1px",
+        2: "2px",
+        3: "3px",
+        4: "4px",
+        6: "6px",
+        8: "8px",
       },
       colors: {
         transparent: "transparent",
@@ -72,6 +82,7 @@ module.exports = {
         light_blue: "#24a3b5",
         page_white: "#fef6d4",
         bg_blue: "#eff7fa",
+        off_white: "#e7dee0",
       },
       spacing: {
         1: "2px",

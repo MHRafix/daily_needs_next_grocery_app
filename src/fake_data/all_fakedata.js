@@ -69,8 +69,8 @@ export const profile_navigation = [
   },
   {
     _id: 4,
-    menu_name: "edit account",
-    href: "/edit_account",
+    menu_name: "edit account details",
+    href: "/edit_account_details",
     menu_icon: <FiEdit />,
   },
 ];

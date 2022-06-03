@@ -1,8 +1,8 @@
 import Cookie from "js-cookie";
 import React from "react";
 import Breadcrumb from "../../commons/Breadcrumb/Breadcrumb";
-import ProfileContentBody from "../my_profile_dashboard/ProfileContentBody";
 import ProfileContentContainer from "../my_profile_dashboard/ProfileContentContainer";
+import MyAllOrdersContent from "./MyAllOrdersContent";
 export default function MyAllOrdersMain() {
   // breadcrunb navigation
   const userInfo =
@@ -10,14 +10,14 @@ export default function MyAllOrdersMain() {
     JSON.parse(Cookie.get("user_information"));
 
   if (userInfo?.user_name) {
-    var bread_string = `My Profile/${userInfo?.user_name}/manage orders`;
+    var bread_string = `My Profile/${userInfo?.user_name}/manage all orders`;
   }
 
   return (
     <>
       <Breadcrumb bread_nav={bread_string} />
       <ProfileContentContainer>
-        <ProfileContentBody />
+        <MyAllOrdersContent />
       </ProfileContentContainer>
     </>
   );

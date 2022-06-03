@@ -377,9 +377,38 @@
     @apply flex items-center border border-slate-200 rounded-sm py-extra_padding4 px-1 capitalize tracking-wide lg:text-light my-1 cursor-pointer bg-gradient-to-r from-orangee to-orangee_red text-white;
   }
 
-  .content_body_wrapper {
-    @apply py-2 px-3;
+  #content_body_wrapper {
+    @apply p-1;
   }
+
+  #content_title {
+    @apply text-black3 text-light capitalize;
+  }
+
+  #border_line {
+    @apply w-10 my-1 h-0 bg-green block;
+  }
+
+  #page_content_body_document {
+    @apply mt-8 mb-2;
+  }
+
+  #topbar_purchase_summary {
+    @apply sm:bg-gradient-to-r sm:from-deep_cyan sm:to-green bg-gradient-to-b from-deep_cyan to-green text-white grid grid-rows-1 sm:grid-cols-3 p-2 rounded-md shadow-lg;
+  }
+
+  #purchase_history_amount {
+    @apply text-center sm:!border-r-1 border-off_white sm:my-0 my-2;
+  }
+
+  #amount_label {
+    @apply text-medium_light font-bold;
+  }
+
+  #hstory_name {
+    @apply capitalize text-sm tracking-wide;
+  }
+
   /* all btn css here */
   .btn {
     @apply bg-gradient-to-r from-orangee to-orangee_red;

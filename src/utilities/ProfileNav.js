@@ -9,7 +9,7 @@ export default function ProfileNav({ menu_data }) {
   const active_path = `/my_account/my_profile${href}`;
 
   return (
-    <NextLink href={`/my_account/my_profile/${href}`} passHref>
+    <NextLink href={`/my_account/my_profile${href}`} passHref>
       <div
         id={
           active_path === asPath ? "profile_nav_active" : "profile_nav_normal"
