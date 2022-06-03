@@ -2,7 +2,7 @@ import React from "react";
 import CardData from "../../../utilities/CardData";
 import DataChart from "../../../utilities/GraphChart/DataChart";
 import ProfileContentLayout from "../../../utilities/ProfileContentLayout";
-import { card_fake_data } from "../../../utilities/React_Table/Data_Tables.js/table_data";
+import { card_fake_data } from "../../../utilities/React_Table/DataTables.js/table_data";
 
 export default function ProfileDashboardContent() {
   //data for bar chart
