@@ -2,7 +2,7 @@ import NextLink from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 
-export default function Category({ filter_type, data }) {
+export default function FilterCard({ filter_type, data }) {
   const router = useRouter();
   const { filter_slug } = router.query;
 

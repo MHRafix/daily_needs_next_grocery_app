@@ -1,6 +1,6 @@
 import React from "react";
 import { categories_data } from "../../fake_data/all_fakedata";
-import Category from "../../utilities/Category";
+import FilterCard from "../../utilities/FilterCard";
 import MultiRangeSlider from "../../utilities/MultiRangeSlider";
 import SidebarPartContainer from "../commons/layout/SidebarPartContainer";
 
@@ -24,7 +24,7 @@ export default function ShopSidebar() {
 
       <SidebarPartContainer filterer_name="product categories">
         {categories_data.map((category) => (
-          <Category
+          <FilterCard
             key={category._id}
             filter_type="categories"
             data={category}
@@ -34,7 +34,11 @@ export default function ShopSidebar() {
 
       <SidebarPartContainer filterer_name="product status">
         {stock_data.map((stock) => (
-          <Category key={stock._id} filter_type="product_status" data={stock} />
+          <FilterCard
+            key={stock._id}
+            filter_type="product_status"
+            data={stock}
+          />
         ))}
       </SidebarPartContainer>
 
