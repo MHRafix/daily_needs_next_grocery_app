@@ -8,7 +8,7 @@ import db from "../../utilities/database";
 export default function ProductByStatus({ matched_products }) {
   const router = useRouter();
   const { filter_slug } = router.query;
-  const bread_string = `Categories / ${filter_slug}`;
+  const bread_string = `shop / product status / ${filter_slug}`;
 
   return (
     <>

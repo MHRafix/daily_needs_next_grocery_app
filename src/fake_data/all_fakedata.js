@@ -41,7 +41,7 @@ export const header_navigation = [
   { _id: 1, menu_name: "home", href: "/" },
   { _id: 2, menu_name: "about us", href: "/about_us" },
   { _id: 3, menu_name: "fruits & vegetables", href: "/fruits_and_vegetables" },
-  { _id: 4, menu_name: "shop", href: "/shop" },
+  { _id: 4, menu_name: "shop", href: "/shop/grid_shop" },
   { _id: 5, menu_name: "blog", href: "/blog" },
   { _id: 6, menu_name: "FAQ", href: "/faq" },
   { _id: 7, menu_name: "contact", href: "/contact" },
@@ -525,6 +525,7 @@ export const products_data2 = [
       tags: ["vegtables", "fruits"],
     },
     product_status: "in-stock",
+    product_type: "on-sale",
   },
   {
     // _id: 114,
@@ -564,6 +565,7 @@ export const products_data2 = [
       tags: ["green fruits", "fruits"],
     },
     product_status: "in-stock",
+    product_type: "on-sale",
   },
   {
     // _id: 115,
@@ -603,6 +605,7 @@ export const products_data2 = [
       tags: ["green fruits", "fruits"],
     },
     product_status: "in-stock",
+    product_type: "on-sale",
   },
   {
     // _id: 116,
@@ -642,6 +645,7 @@ export const products_data2 = [
       tags: ["green fruits", "fruits"],
     },
     product_status: "in-stock",
+    product_type: "on-sale",
   },
   {
     // _id: 117,
@@ -681,6 +685,7 @@ export const products_data2 = [
       tags: ["green fruits", "fruits"],
     },
     product_status: "in-stock",
+    product_type: "offer-sale",
   },
   {
     // _id: 118,
@@ -720,6 +725,7 @@ export const products_data2 = [
       tags: ["green fruits", "fruits"],
     },
     product_status: "in-stock",
+    product_type: "offer-sale",
   },
   {
     // _id: 119,
@@ -759,6 +765,7 @@ export const products_data2 = [
       tags: ["green fruits", "fruits"],
     },
     product_status: "in-stock",
+    product_type: "on-sale",
   },
   {
     // _id: 120,
@@ -798,6 +805,7 @@ export const products_data2 = [
       tags: ["green fruits", "fruits"],
     },
     product_status: "in-stock",
+    product_type: "offer-sale",
   },
   {
     // _id: 121,
@@ -837,5 +845,6 @@ export const products_data2 = [
       tags: ["green fruits", "fruits"],
     },
     product_status: "in-stock",
+    product_type: "fixed-sale",
   },
 ];

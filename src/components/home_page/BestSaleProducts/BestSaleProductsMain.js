@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import ProductCard from "../../../utilities/ProductCard";
+import GridProductCard from "../../../utilities/GridProductCard";
 import SectionTitle from "../../../utilities/SectionTitle";
 import SliderArrow from "../../../utilities/SliderArrow";
 export default function BestSaleProductsMain({ sale_products_data }) {
@@ -64,7 +64,7 @@ export default function BestSaleProductsMain({ sale_products_data }) {
       </div>
       <Slider {...settings}>
         {sale_products_data?.map((product) => (
-          <ProductCard key={product._id} product_data={product} />
+          <GridProductCard key={product._id} product_data={product} />
         ))}
       </Slider>
     </div>

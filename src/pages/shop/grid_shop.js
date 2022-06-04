@@ -4,7 +4,7 @@ import LayoutContainer from "../../components/commons/layout/LayoutContainer";
 import ShopPageMain from "../../components/shop_page/ShopPageMain";
 import db from "../../utilities/database";
 
-export default function ShopPage({ products }) {
+export default function GridShopPage({ products }) {
   return (
     <>
       <LayoutContainer

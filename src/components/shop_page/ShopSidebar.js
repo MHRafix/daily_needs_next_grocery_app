@@ -7,11 +7,15 @@ import SidebarPartContainer from "../commons/layout/SidebarPartContainer";
 export default function ShopSidebar() {
   const stock_data = [
     { _id: 1, filter_name: "in-stock" },
+    { _id: 2, filter_name: "stock-out" },
+  ];
+
+  const type_data = [
     { _id: 2, filter_name: "on-sale" },
     { _id: 3, filter_name: "fixed-sale" },
     { _id: 4, filter_name: "offer-sale" },
-    { _id: 5, filter_name: "stock-out" },
   ];
+
   return (
     <div className="sidebar_wrapper">
       <SidebarPartContainer filterer_name="filter by price">
@@ -42,8 +46,10 @@ export default function ShopSidebar() {
         ))}
       </SidebarPartContainer>
 
-      <SidebarPartContainer filterer_name="latest products">
-        latest products are here...!
+      <SidebarPartContainer filterer_name="product type">
+        {type_data.map((type) => (
+          <FilterCard key={type._id} filter_type="product_type" data={type} />
+        ))}
       </SidebarPartContainer>
     </div>
   );

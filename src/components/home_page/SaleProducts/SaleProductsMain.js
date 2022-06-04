@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "../../../utilities/ProductCard";
+import GridProductCard from "../../../utilities/GridProductCard";
 import SectionTitle from "../../../utilities/SectionTitle";
 export default function SaleProductsMain({ sale_products_data }) {
   return (
@@ -9,7 +9,7 @@ export default function SaleProductsMain({ sale_products_data }) {
       </div>
       <div className="prodcuts_area">
         {sale_products_data?.map((product) => (
-          <ProductCard key={product._id} product_data={product} />
+          <GridProductCard key={product._id} product_data={product} />
         ))}
       </div>
     </div>

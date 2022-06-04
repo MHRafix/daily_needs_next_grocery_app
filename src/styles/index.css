@@ -117,12 +117,32 @@
     @apply grid pt-2 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 md:gap-12 xl:grid-cols-4 xl:gap-12;
   }
 
-  .shop_products {
+  .grid_shop_products {
     @apply grid pt-2 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 md:gap-12 xl:grid-cols-3 xl:gap-12;
   }
 
-  #product_card {
+  .list_shop_products {
+    @apply grid pt-2 grid-cols-1 gap-y-10;
+  }
+
+  #product_card_grid_style {
     @apply bg-white mx-1 shadow-md my-5 rounded-sm p-2 relative text-center;
+  }
+
+  #product_card_list_style {
+    @apply bg-white mx-1 shadow-md my-5 rounded-sm p-2 pb-3 relative text-center lg:flex items-center;
+  }
+
+  #card_header_list {
+    @apply lg:w-1/3;
+  }
+
+  #card_body_list {
+    @apply lg:w-2/3 text-left ml-12;
+  }
+
+  #product_title_list {
+    @apply text-normal font-semibold mb-1 cursor-pointer text-info_color tracking-wide;
   }
 
   #stock_slae_badge {
@@ -145,6 +165,10 @@
     @apply flex justify-center items-center text-green mb-7 text-thin;
   }
 
+  #stock_status_list {
+    @apply flex justify-start items-center text-green mt-2 mb-7 text-thin;
+  }
+
   #stronger {
     @apply text-thin text-black3 capitalize;
   }
@@ -163,6 +187,10 @@
 
   #add_to_cart_area {
     @apply w-3/4 mx-auto bg-light_red rounded-full p-1 h-15 flex justify-between items-center;
+  }
+
+  #add_to_cart_area_list {
+    @apply w-full h-15 bg-light_red rounded-full p-1 text-normal flex justify-between items-center my-5;
   }
 
   .middle_banner_wrapper {
@@ -448,6 +476,10 @@
 
   #cart_btn {
     @apply bg-gradient-to-r from-orangee to-orangee_red flex justify-center items-center mx-auto mt-4 text-white px-1.1 py-extra_padding3 rounded-full text-thin;
+  }
+
+  #cart_btn_list {
+    @apply bg-gradient-to-r from-orangee to-orangee_red flex justify-center items-center mt-4 text-white  rounded-full ml-2 w-full h-15 text-light;
   }
 
   #form_btn {

@@ -4,9 +4,9 @@ import React, { useState } from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useDispatch } from "react-redux";
-import { handleAddToCart } from "../utilities/handleCart";
+import { handleAddToCart } from "./handleCart";
 
-export default function ProductCard({ product_data }) {
+export default function ListProductCard({ product_data }) {
   const {
     _id,
     slug,
@@ -26,8 +26,8 @@ export default function ProductCard({ product_data }) {
   const [qty, setQty] = useState(1);
   return (
     <>
-      <div id="product_card">
-        <div id="card_header">
+      <div id="product_card_list_style">
+        <div id="card_header_list">
           <div id="stock_slae_badge">
             <div id="sale_badge">15%</div>
             {stock_available > 0 ? (
@@ -42,11 +42,11 @@ export default function ProductCard({ product_data }) {
             </div>
           </NextLink>
         </div>
-        <div id="card_body">
+        <div id="card_body_list">
           <NextLink href={`/shop/singleProducts/${slug}`} passHref>
-            <h3 id="product_title">{title}</h3>
+            <h3 id="product_title_list">{title}</h3>
           </NextLink>
-          <h5 id="stock_status">
+          <h5 id="stock_status_list">
             <BsCheckCircleFill />
             &nbsp;&nbsp;<strong id="stronger">{product_status}</strong>&nbsp;
             <span style={{ color: "#666" }}> - 1 kg</span>
@@ -58,9 +58,10 @@ export default function ProductCard({ product_data }) {
 
             {sale_price !== 0 && <span id="sale_price">৳ {sale_price}</span>}
           </div>
-        </div>
-        <div id="card_action">
-          <div id="add_to_cart_area">
+          <div className="!my-2 text-black3">
+            {additional_info?.description.slice(0, 170)}
+          </div>
+          <div id="add_to_cart_area_list">
             <button id="qty_controller" onClick={() => setQty(qty - 1)}>
               -
             </button>
@@ -72,14 +73,14 @@ export default function ProductCard({ product_data }) {
           <div id="add_to_cart_btn">
             {stock_available > 0 ? (
               <button
-                id="cart_btn"
+                id="cart_btn_list"
                 onClick={() => handleAddToCart(product_data, dispatch, qty)}
               >
                 <MdOutlineShoppingCart /> &nbsp; Add to cart
               </button>
             ) : (
               <NextLink href={`/shop/singleProducts/${_id}`} passHref>
-                <button id="cart_btn">Read more</button>
+                <button id="cart_btn_list">Read more</button>
               </NextLink>
             )}
           </div>

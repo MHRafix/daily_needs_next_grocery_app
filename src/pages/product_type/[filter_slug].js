@@ -5,10 +5,11 @@ import LayoutContainer from "../../components/commons/layout/LayoutContainer";
 import FilteredShopMain from "../../components/filter_shop/FilteredShopMain";
 import db from "../../utilities/database";
 
-export default function CategoryShop({ matched_products }) {
+export default function ProductByType({ matched_products }) {
   const router = useRouter();
   const { filter_slug } = router.query;
-  const bread_string = `shop / categories / ${filter_slug}`;
+  const bread_string = `shop / product type / ${filter_slug}`;
+
   return (
     <>
       <LayoutContainer
@@ -24,7 +25,7 @@ export default function CategoryShop({ matched_products }) {
   );
 }
 
-// // get category product serverSideprops
+// get category product serverSideprops
 // export async function getServerSideProps(context) {
 //   // selected prodcut unique id
 //   const { params } = context;
@@ -33,11 +34,11 @@ export default function CategoryShop({ matched_products }) {
 //   // req for all prodcuts
 //   const res = await fetch(`${process.env.ROOT_URI}/api/allproducts`);
 //   const products = await res.json();
-
 //   // filter category products which is selected
 //   const matched_products = products.filter(
-//     (product) => product.category === filter_slug
+//     (product) => product.product_type === filter_slug
 //   );
+
 //   // return the filtered products here
 //   return { props: { matched_products } };
 // }
@@ -47,7 +48,9 @@ export async function getServerSideProps(context) {
   const { filter_slug } = params;
 
   await db.connect();
-  const matched_products = await Product.find({ category: filter_slug }).lean();
+  const matched_products = await Product.find({
+    product_type: filter_slug,
+  }).lean();
   await db.disconnect();
   return {
     props: {

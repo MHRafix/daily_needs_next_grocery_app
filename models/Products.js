@@ -21,6 +21,7 @@ const productSchema = new mongoose.Schema(
       tags: [String],
     },
     product_status: { type: String, required: true },
+    product_type: { type: String, default: "fixed-sale" },
   },
   { timestamps: true }
 );
