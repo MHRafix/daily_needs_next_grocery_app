@@ -6,7 +6,6 @@ import {
   LineController,
   LineElement,
   PointElement,
-  Title,
 } from "chart.js";
 import React from "react";
 import { Line } from "react-chartjs-2";
@@ -18,8 +17,7 @@ export default function DataChart({ data }) {
     LineElement,
     BarElement,
     PointElement,
-    LinearScale,
-    Title
+    LinearScale
   );
 
   return (

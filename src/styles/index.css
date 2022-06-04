@@ -410,15 +410,15 @@
   }
 
   .purchased_chart_and_payment_table_wrapper {
-    @apply grid grid-rows-1 md:grid-cols-2 mt-15 gap-10;
+    @apply grid grid-rows-1 md:grid-cols-2 mt-15 gap-y-16 gap-x-10;
   }
 
   .purchased_chart_wrapper {
-    @apply shadow-md rounded-md h-per_4;
+    @apply shadow-md rounded-md md:h-per_4;
   }
 
   .purchased_data_table_wrapper {
-    @apply shadow-md rounded-md h-per_4;
+    @apply shadow-md rounded-md md:h-per_4 h-per_5;
   }
 
   .dashboard_content_title {

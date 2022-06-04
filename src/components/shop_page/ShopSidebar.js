@@ -6,10 +6,11 @@ import SidebarPartContainer from "../commons/layout/SidebarPartContainer";
 
 export default function ShopSidebar() {
   const stock_data = [
-    { _id: 1, cat_name: "in stock" },
-    { _id: 2, cat_name: "on sale" },
-    { _id: 3, cat_name: "fixed sale" },
-    { _id: 4, cat_name: "offer sale" },
+    { _id: 1, filter_name: "in-stock" },
+    { _id: 2, filter_name: "on-sale" },
+    { _id: 3, filter_name: "fixed-sale" },
+    { _id: 4, filter_name: "offer-sale" },
+    { _id: 5, filter_name: "stock-out" },
   ];
   return (
     <div className="sidebar_wrapper">
@@ -23,13 +24,17 @@ export default function ShopSidebar() {
 
       <SidebarPartContainer filterer_name="product categories">
         {categories_data.map((category) => (
-          <Category key={category._id} cat_data={category} />
+          <Category
+            key={category._id}
+            filter_type="categories"
+            data={category}
+          />
         ))}
       </SidebarPartContainer>
 
       <SidebarPartContainer filterer_name="product status">
         {stock_data.map((stock) => (
-          <Category key={stock._id} cat_data={stock} />
+          <Category key={stock._id} filter_type="product_status" data={stock} />
         ))}
       </SidebarPartContainer>
 

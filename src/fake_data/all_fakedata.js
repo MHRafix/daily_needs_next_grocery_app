@@ -77,68 +77,68 @@ export const profile_navigation = [
 
 // categories fake data here
 export const categories_data = [
-  { _id: 1, cat_name: "Beverages", cat_image: CatImg1, cat_items: 1 },
+  { _id: 1, filter_name: "Beverages", cat_image: CatImg1, cat_items: 1 },
   {
     _id: 2,
-    cat_name: "Biscuits, Snacks & Chocolates",
+    filter_name: "Biscuits, Snacks & Chocolates",
     cat_image: CatImg2,
     cat_items: 3,
   },
   {
     _id: 3,
-    cat_name: "Breakfast & Dairy",
+    filter_name: "Breakfast & Dairy",
     cat_image: CatImg3,
     cat_items: 22,
   },
   {
     _id: 4,
-    cat_name: "Fruits & Vegetables",
+    filter_name: "Fruits & Vegetables",
     cat_image: CatImg4,
     cat_items: 52,
   },
   {
     _id: 5,
-    cat_name: "Furnishing & Home Needs",
+    filter_name: "Furnishing & Home Needs",
     cat_image: CatImg5,
     cat_items: 62,
   },
   {
     _id: 6,
-    cat_name: "Grocery & Staples",
+    filter_name: "Grocery & Staples",
     cat_image: CatImg6,
     cat_items: 42,
   },
   {
     _id: 7,
-    cat_name: "Home & Kitchen",
+    filter_name: "Home & Kitchen",
     cat_image: CatImg7,
     cat_items: 212,
   },
   {
     _id: 8,
-    cat_name: "Household Needs",
+    filter_name: "Household Needs",
     cat_image: CatImg8,
     cat_items: 342,
   },
   {
     _id: 9,
-    cat_name: "Meats, Frozen & Seafood",
+    filter_name: "Meats, Frozen & Seafood",
     cat_image: CatImg9,
     cat_items: 3,
   },
   {
     _id: 10,
-    cat_name: "Noodles, Sauces & Instant Food",
+    filter_name: "Noodles, Sauces & Instant Food",
     cat_image: CatImg10,
     cat_items: 3,
   },
   {
     _id: 11,
-    cat_name: "Personal Care",
+    filter_name: "Personal Care",
     cat_image: CatImg11,
     cat_items: 3,
   },
-  { _id: 12, cat_name: "Pet Care", cat_image: CatImg12, cat_items: 3 },
+  { _id: 12, filter_name: "Pet Care", cat_image: CatImg12, cat_items: 3 },
 ];
 
 // products fake data here
