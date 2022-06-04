@@ -1,20 +1,15 @@
 import React from "react";
-import { categories_data } from "../../fake_data/all_fakedata";
+import {
+  categories_data,
+  stock_data,
+  type_data,
+} from "../../fake_data/all_fakedata";
 import FilterCard from "../../utilities/FilterCard";
 import MultiRangeSlider from "../../utilities/MultiRangeSlider";
 import SidebarPartContainer from "../commons/layout/SidebarPartContainer";
 
-export default function ShopSidebar() {
-  const stock_data = [
-    { _id: 1, filter_name: "in-stock" },
-    { _id: 2, filter_name: "stock-out" },
-  ];
-
-  const type_data = [
-    { _id: 2, filter_name: "on-sale" },
-    { _id: 3, filter_name: "fixed-sale" },
-    { _id: 4, filter_name: "offer-sale" },
-  ];
+export default function ShopSidebar({ priceRangeData, handleSetCookie }) {
+  const { setMinRange, setMaxRange } = priceRangeData;
 
   return (
     <div className="sidebar_wrapper">
@@ -22,8 +17,18 @@ export default function ShopSidebar() {
         <MultiRangeSlider
           min={0}
           max={1000}
-          onChange={({ min, max }) => console.log(`min = ${min}, max = ${max}`)}
+          onChange={({ min, max }) => {
+            setMinRange(min);
+            setMaxRange(max);
+          }}
         />
+        <button
+          onClick={handleSetCookie}
+          id="cart_btn"
+          className="!mx-0 !p-extra_padding4 !rounded-sm !text-light"
+        >
+          Filter Now
+        </button>
       </SidebarPartContainer>
 
       <SidebarPartContainer filterer_name="product categories">

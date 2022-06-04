@@ -29,7 +29,14 @@ export default function GridProductCard({ product_data }) {
       <div id="product_card_grid_style">
         <div id="card_header">
           <div id="stock_slae_badge">
-            <div id="sale_badge">15%</div>
+            {sale_price !== 0 && (
+              <div id="sale_badge">
+                {Math.ceil(
+                  (regular_price - sale_price) / (regular_price / 100)
+                )}
+                % OFF
+              </div>
+            )}
             {stock_available > 0 ? (
               <div id="stock_status_green"></div>
             ) : (

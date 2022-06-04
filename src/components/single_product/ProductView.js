@@ -16,9 +16,12 @@ export default function ProductView({ product }) {
         <Image src={product?.thumbnail_big} alt="single_product_image" />
       </div>
       <div className="product_details_wrapper">
-        <span id="sale_badge" className="!text-light">
-          15% OFF
-        </span>
+        {sale_price !== 0 && (
+          <div id="sale_badge" className="!text-light">
+            {Math.ceil((regular_price - sale_price) / (regular_price / 100))}%
+            OFF
+          </div>
+        )}
         <h1 className="product_title">{product?.title}</h1>
         <div id="product_price">
           <span

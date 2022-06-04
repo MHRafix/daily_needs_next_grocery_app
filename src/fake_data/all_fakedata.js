@@ -141,6 +141,19 @@ export const categories_data = [
   { _id: 12, filter_name: "Pet Care", cat_image: CatImg12, cat_items: 3 },
 ];
 
+// stock data here
+export const stock_data = [
+  { _id: 1, filter_name: "in-stock" },
+  { _id: 2, filter_name: "stock-out" },
+];
+
+// type data here
+export const type_data = [
+  { _id: 2, filter_name: "on-sale" },
+  { _id: 3, filter_name: "fixed-sale" },
+  { _id: 4, filter_name: "offer-sale" },
+];
+
 // products fake data here
 export const products_data = [
   {

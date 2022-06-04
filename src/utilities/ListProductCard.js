@@ -29,7 +29,14 @@ export default function ListProductCard({ product_data }) {
       <div id="product_card_list_style">
         <div id="card_header_list">
           <div id="stock_slae_badge">
-            <div id="sale_badge">15%</div>
+            {sale_price !== 0 && (
+              <div id="sale_badge">
+                {Math.ceil(
+                  (regular_price - sale_price) / (regular_price / 100)
+                )}
+                % OFF
+              </div>
+            )}
             {stock_available > 0 ? (
               <div id="stock_status_green"></div>
             ) : (
