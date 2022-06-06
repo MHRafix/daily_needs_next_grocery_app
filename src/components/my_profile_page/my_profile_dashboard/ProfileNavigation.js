@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 import { profile_navigation } from "../../../fake_data/all_fakedata";
-import UserPic from "../../../images/logo/user2.png";
+import UserPic from "../../../images/logo/1642355899259.jpg";
 import ProfileNav from "../../../utilities/ProfileNav";
 
 export default function ProfileNavigation() {
