@@ -1,6 +1,13 @@
 import React from "react";
 
-export const FormTextField = ({ form_label, type, required, setState }) => {
+export const FormTextField = ({
+  form_label,
+  type,
+  required,
+  setState,
+  defaultValue,
+  disabled,
+}) => {
   return (
     <div id="field_wrapper">
       <label id="input_label" htmlFor="field_label">
@@ -11,8 +18,10 @@ export const FormTextField = ({ form_label, type, required, setState }) => {
       <input
         type={type}
         id="field_input"
+        defaultValue={defaultValue}
         onChange={(e) => setState(e.target.value)}
         required={required}
+        disabled={disabled}
       />
     </div>
   );

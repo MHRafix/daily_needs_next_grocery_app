@@ -16,6 +16,7 @@ export default function ProfileNavigation() {
   const router = useRouter();
   const handleLogout = () => {
     Cookie.remove("user_information");
+    Cookie.remove("user_verify");
     router.push("/my_account/my_acc");
   };
 
@@ -24,7 +25,7 @@ export default function ProfileNavigation() {
       <div className="profile_details">
         <Image
           className="rounded-full my-5"
-          src={userInfo?.user_img ? userInfo?.user_img : UserPic}
+          src={UserPic}
           alt="Profile Picture"
           width={90}
           height={90}
