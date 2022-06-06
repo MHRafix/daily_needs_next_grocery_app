@@ -35,7 +35,7 @@ export default function EditFormDetails() {
   const handleVerifyUser = async (e) => {
     e.preventDefault();
     const { data } = await axios.post(
-      `http://localhost:3000/api/my_account/verify_user`,
+      `https://daily-need.vercel.app/api/my_account/verify_user`,
       { verifypass, useremail }
     );
 

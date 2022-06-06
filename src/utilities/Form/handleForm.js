@@ -53,7 +53,7 @@ const sendReq = async (reqDep, redirect_url) => {
   const { redirect } = router.query;
 
   const { data } = await axios.post(
-    `http://localhost:3000/api/${api_url}`,
+    `https://daily-need.vercel.app/api/${api_url}`,
     user_info
   );
 
