@@ -19,7 +19,7 @@ export default function ProfileNavigation() {
   const handleLogout = () => {
     Cookie.remove("user_information");
     Cookie.remove("user_verify");
-    router.push("/my_account/my_acc");
+    // router.push("/my_account/my_acc");
   };
 
   return (
