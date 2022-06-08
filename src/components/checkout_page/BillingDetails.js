@@ -13,9 +13,9 @@ export default function BillingDetails() {
     Cookie.get("user_information") &&
     JSON.parse(Cookie.get("user_information"));
 
-  //   if (!userInfo?.user_email) {
-  //     router.push("/my_account/my_acc");
-  //   }
+  if (!userInfo?.user_email) {
+    router.push("/my_account/my_acc");
+  }
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState(userInfo?.user_email);
