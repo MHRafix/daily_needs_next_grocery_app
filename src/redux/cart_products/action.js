@@ -5,7 +5,7 @@ export const addToCartProducts = {
 
 // add cookie to redux
 export const addCookieToRedux = {
-  ADD_COOKIE_TO_REDUX: "ADD_COOKIE_TO_REDUX",
+  ADD_COOKIE_REDUX: "ADD_COOKIE_REDUX",
 };
 
 // reduce product from cart action
@@ -44,5 +44,6 @@ export const qtyDecrease = (_id) => {
 
 // add cookie to redux
 export const reduceCookie = (dataArray) => {
-  return { type: addCookieToRedux.ADD_COOKIE_TO_REDUX, payload: dataArray };
+  console.log(dataArray);
+  return { type: addCookieToRedux.ADD_COOKIE_REDUX, payload: dataArray };
 };

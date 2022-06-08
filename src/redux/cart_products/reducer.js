@@ -1,9 +1,9 @@
 import {
+  addCookieToRedux,
   addToCartProducts,
   decreaseQty,
   increaseQty,
   reduceCartProduct,
-  reduceCookie,
 } from "./action";
 
 // carted_products ? carted_products : [],
@@ -18,11 +18,6 @@ export default function reducer(state = initialState, { type, payload }) {
     case addToCartProducts.ADD_TO_CART: {
       const new_cart = [...state.cart_list, payload];
       return { ...state, cart_list: new_cart };
-    }
-
-    case reduceCookie.ADD_COOKIE_TO_REDUX: {
-      console.log("aiche");
-      return { ...state, cart_list: payload };
     }
 
     // remove or reduce product from cart list here
@@ -69,6 +64,12 @@ export default function reducer(state = initialState, { type, payload }) {
         alert("Minimum quantity limit exceed!");
         return state;
       }
+    }
+
+    case addCookieToRedux.ADD_COOKIE_REDUX: {
+      console.log(payload);
+      // const new_cart = [...state.cart_list, ];
+      return { ...state, cart_list: payload };
     }
     default:
       return state;
