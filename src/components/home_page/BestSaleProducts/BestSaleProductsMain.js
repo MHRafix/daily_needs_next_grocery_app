@@ -60,7 +60,11 @@ export default function BestSaleProductsMain({ sale_products_data }) {
   return (
     <div className="sale_products_wrapper">
       <div className="section_title_wrapper">
-        <SectionTitle section_title="best selling products" percentage="20%" />
+        <SectionTitle
+          section_title="best selling products"
+          percentage="20%"
+          link_href="/"
+        />
       </div>
       <Slider {...settings}>
         {sale_products_data?.map((product) => (

@@ -7,13 +7,15 @@ export default function SliderArrow() {
         style={{
           ...style,
           background: "linear-gradient(135deg, #0cc5b7 0%,#2bd891 100%)",
-          padding: "20px",
+          padding: "15px",
           borderRadius: "100px",
           color: "white",
           zIndex: 22,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          position: "absolute",
+          right: "-15px!important",
         }}
         onClick={onClick}
       />
@@ -28,13 +30,15 @@ export default function SliderArrow() {
         style={{
           ...style,
           background: "linear-gradient(135deg, #0cc5b7 0%,#2bd891 100%)",
-          padding: "20px",
+          padding: "15px",
           borderRadius: "100px",
           color: "white",
           zIndex: 22,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          position: "absolute",
+          left: "-14px!important",
         }}
         onClick={onClick}
       />

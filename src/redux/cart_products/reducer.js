@@ -67,8 +67,6 @@ export default function reducer(state = initialState, { type, payload }) {
     }
 
     case addCookieToRedux.ADD_COOKIE_REDUX: {
-      console.log(payload);
-      // const new_cart = [...state.cart_list, ];
       return { ...state, cart_list: payload };
     }
     default:

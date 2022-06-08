@@ -1,14 +1,21 @@
 import Cookie from "js-cookie";
 import NextLink from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import Product from "../../../../models/Products";
 import { header_navigation } from "../../../fake_data/all_fakedata";
 import { reduceCookie } from "../../../redux/cart_products/action";
-import db from "../../../utilities/database";
 
-export default function NavigationBar({ products }) {
+export default function NavigationBar() {
+  // fetching all data from the server
   const dispatch = useDispatch();
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    fetch(`http://localhost:3000/api/allproducts`)
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, []);
+
+  // set cart product to the redu
   const cart_cookie_products =
     Cookie.get("cart_product_ids") &&
     JSON.parse(Cookie.get("cart_product_ids"));
@@ -17,16 +24,19 @@ export default function NavigationBar({ products }) {
 
   if (cart_cookie_products) {
     for (const cart_product of cart_cookie_products) {
-      const matched_cart = data.find(
+      const matched_cart = products?.find(
         (product) => product._id === cart_product._id
       );
-      matched_cart.quantity = cart_product.quantity;
-      carted_products.push(matched_cart);
+      if (matched_cart) {
+        matched_cart.quantity = cart_product.quantity;
+        carted_products.push(matched_cart);
+      }
     }
     setTimeout(() => {
       dispatch(reduceCookie(carted_products));
-    }, 1000);
+    }, 100);
   }
+
   return (
     <div
       className="navigation_wrapper"
@@ -45,15 +55,4 @@ export default function NavigationBar({ products }) {
       </div>
     </div>
   );
-}
-
-export async function getServerSideProps() {
-  await db.connect();
-  const products = await Product.find({}).lean();
-  await db.disconnect();
-  return {
-    props: {
-      products: products.map(db.convertDocToObj),
-    },
-  };
 }

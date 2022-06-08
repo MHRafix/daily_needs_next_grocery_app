@@ -1,3 +1,4 @@
+import NextLink from "next/link";
 import React from "react";
 
 export default function CheckoutTable({ carted_products }) {
@@ -42,12 +43,7 @@ export default function CheckoutTable({ carted_products }) {
           </div>
         </div>
       </div>
-      <div className="flex justify-between items-center">
-        <div className="checkout_btnq">
-          <button id="cart_btn" className="!rounded-sm !ml-0 !py-1">
-            PROCEED TO CHECKOUT
-          </button>
-        </div>
+      <div className="grid_layout layout_two">
         <div className="flex justify-end items-center">
           <input
             type="text"
@@ -58,6 +54,13 @@ export default function CheckoutTable({ carted_products }) {
           <button id="cart_btn" className="!rounded-sm !ml-0 !py-1">
             Apply Coupon
           </button>
+        </div>
+        <div className="checkout_btn ml-auto">
+          <NextLink href="/checkout" passHref>
+            <button id="cart_btn" className="!rounded-sm !ml-0 !py-1">
+              PROCEED TO CHECKOUT
+            </button>
+          </NextLink>
         </div>
       </div>
     </div>

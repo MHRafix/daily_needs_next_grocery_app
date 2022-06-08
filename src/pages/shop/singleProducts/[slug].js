@@ -1,8 +1,8 @@
 import React from "react";
-// import Product from "../../../../models/Products";
+import Product from "../../../../models/Products";
 import LayoutContainer from "../../../components/commons/layout/LayoutContainer";
 import SignleProductMain from "../../../components/single_product/SignleProductMain";
-// import db from "../../../utilities/database";
+import db from "../../../utilities/database";
 
 export default function SingleProduct(props) {
   // single product destructure from the props
@@ -27,32 +27,32 @@ export default function SingleProduct(props) {
 }
 
 // get single product serverSideprops
-export async function getServerSideProps(context) {
-  // selected prodcut unique id
-  const { params } = context;
-  const { slug } = params;
-
-  // req for all prodcuts
-  const res = await fetch(`${process.env.ROOT_URI}/api/allproducts`);
-  const products = await res.json();
-
-  // find single one which is selected
-  const single_product = products.find((product) => product.slug === slug);
-
-  // return the selected product here
-  return { props: { single_product } };
-}
-
 // export async function getServerSideProps(context) {
+//   // selected prodcut unique id
 //   const { params } = context;
 //   const { slug } = params;
 
-//   await db.connect();
-//   const product = await Product.findOne({ slug }).lean();
-//   await db.disconnect();
-//   return {
-//     props: {
-//       single_product: product,
-//     },
-//   };
+//   // req for all prodcuts
+//   const res = await fetch(`${process.env.ROOT_URI}/api/allproducts`);
+//   const products = await res.json();
+
+//   // find single one which is selected
+//   const single_product = products.find((product) => product.slug === slug);
+
+//   // return the selected product here
+//   return { props: { single_product } };
 // }
+
+export async function getServerSideProps(context) {
+  const { params } = context;
+  const { slug } = params;
+
+  await db.connect();
+  const product = await Product.findOne({ slug }).lean();
+  await db.disconnect();
+  return {
+    props: {
+      single_product: product,
+    },
+  };
+}

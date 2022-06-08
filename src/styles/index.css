@@ -345,7 +345,7 @@
   }
 
   .cart_item_wrapper {
-    @apply flex justify-between items-center bg-white shadow-sm rounded-md my-5 py-1.5 px-2;
+    @apply flex items-center bg-white shadow-sm rounded-md my-5 py-1.5 px-2;
   }
 
   .cart_footer_area {
@@ -586,7 +586,7 @@
     background: white;
     height: 100vh;
     z-index: 500;
-    width: 0%;
+    width: 0px;
     transition: width 0.8s;
   }
 
@@ -597,7 +597,7 @@
     background: white;
     height: 100vh;
     z-index: 500;
-    width: 25%;
+    width: 330px;
     transition: width 0.8s;
   }
 

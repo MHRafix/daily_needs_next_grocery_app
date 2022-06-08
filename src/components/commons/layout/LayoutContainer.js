@@ -2,12 +2,7 @@ import Head from "next/head";
 import React from "react";
 import HeaderMain from "../Header/HeaderMain";
 
-export default function LayoutContainer({
-  children,
-  title,
-  description,
-  data,
-}) {
+export default function LayoutContainer({ children, title, description }) {
   return (
     <div className="page_main_wrapper">
       <Head>

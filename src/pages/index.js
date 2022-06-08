@@ -9,7 +9,6 @@ export default function Home({ products }) {
       <LayoutContainer
         title="Organic Food and Grocery"
         description="This is home page of 'Daily Needs Grocery'"
-        // data={products}
       >
         <HomeMain sale_products={products} />
       </LayoutContainer>

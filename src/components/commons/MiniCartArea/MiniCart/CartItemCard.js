@@ -2,7 +2,8 @@ import Image from "next/image";
 import NextLink from "next/link";
 import React from "react";
 import { useDispatch } from "react-redux";
-import { reduceProduct } from "../../../../redux/cart_products/action";
+import { handleReduceCart } from "../../../../utilities/handleReduceCart";
+
 export default function CartItemCard({ product }) {
   const dispatch = useDispatch();
   return (
@@ -10,11 +11,11 @@ export default function CartItemCard({ product }) {
       <div className="cart_thumbnail shadow-lg">
         <Image src={product?.thumbnail} alt="" width={80} height={80} />
       </div>
-      <div className="cart_product_content !text-left">
+      <div className="ml-10 !text-left">
         <div id="stock_slae_badge">
           <div id="sale_badge">15%</div>
           <div
-            onClick={() => dispatch(reduceProduct(product?._id))}
+            onClick={() => handleReduceCart(product?._id, dispatch)}
             className="text-red-500 cursor-pointer text-semi_medium"
           >
             &times;

@@ -44,6 +44,5 @@ export const qtyDecrease = (_id) => {
 
 // add cookie to redux
 export const reduceCookie = (dataArray) => {
-  console.log(dataArray);
   return { type: addCookieToRedux.ADD_COOKIE_REDUX, payload: dataArray };
 };

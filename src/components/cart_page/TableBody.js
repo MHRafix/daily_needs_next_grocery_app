@@ -2,11 +2,8 @@ import Image from "next/image";
 import NextLink from "next/link";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import {
-  qtyDecrease,
-  qtyIncrease,
-  reduceProduct,
-} from "../../redux/cart_products/action";
+import { qtyDecrease, qtyIncrease } from "../../redux/cart_products/action";
+import { handleReduceCart } from "../../utilities/handleReduceCart";
 
 export default function TableBody({ carted_products }) {
   const { _id, thumbnail, title, prices, quantity } = carted_products;
@@ -55,7 +52,7 @@ export default function TableBody({ carted_products }) {
       </div>
       <div className="table_body_item">
         <span
-          onClick={() => dispatch(reduceProduct(_id))}
+          onClick={() => handleReduceCart(_id, dispatch)}
           className="bg-red-500 text-white cursor-pointer text-semi_medium px-extra_padding3 !rounded-sm"
           id="cart_btn"
         >
