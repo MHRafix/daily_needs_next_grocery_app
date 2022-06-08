@@ -16,10 +16,16 @@ export default function ProductView({ product }) {
         <Image src={product?.thumbnail_big} alt="single_product_image" />
       </div>
       <div className="product_details_wrapper">
-        {sale_price !== 0 && (
-          <div id="sale_badge" className="!text-light">
-            {Math.ceil((regular_price - sale_price) / (regular_price / 100))}%
-            OFF
+        {product?.prices?.sale_price !== 0 && (
+          <div
+            id="sale_badge"
+            className="!text-light !w-per_16 !py-extra_padding2"
+          >
+            {Math.ceil(
+              (product?.prices?.regular_price - product?.prices?.sale_price) /
+                (product?.prices?.regular_price / 100)
+            )}
+            % OFF
           </div>
         )}
         <h1 className="product_title">{product?.title}</h1>

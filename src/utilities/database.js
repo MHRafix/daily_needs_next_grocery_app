@@ -16,7 +16,8 @@ async function connect() {
     await mongoose.disconnect();
   }
   const db = await mongoose.connect(
-    `mongodb+srv://DAILY_NEED:iWOts7X9fABUg2mS@cluster0.ttpfp.mongodb.net/DAILY_NEED?retryWrites=true&w=majority`,
+    // `mongodb+srv://DAILY_NEED:iWOts7X9fABUg2mS@cluster0.ttpfp.mongodb.net/DAILY_NEED?retryWrites=true&w=majority`,
+    `mongodb+srv://Rafiz:HYBpMP9n5pZXukIO@cluster0.ihrci.mongodb.net/DAILY_NEED?retryWrites=true&w=majority`,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,

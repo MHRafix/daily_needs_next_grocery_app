@@ -3,6 +3,7 @@ import {
   decreaseQty,
   increaseQty,
   reduceCartProduct,
+  reduceCookie,
 } from "./action";
 
 // carted_products ? carted_products : [],
@@ -17,6 +18,11 @@ export default function reducer(state = initialState, { type, payload }) {
     case addToCartProducts.ADD_TO_CART: {
       const new_cart = [...state.cart_list, payload];
       return { ...state, cart_list: new_cart };
+    }
+
+    case reduceCookie.ADD_COOKIE_TO_REDUX: {
+      console.log("aiche");
+      return { ...state, cart_list: payload };
     }
 
     // remove or reduce product from cart list here
