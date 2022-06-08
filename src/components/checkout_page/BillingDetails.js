@@ -1,5 +1,4 @@
 import Cookie from "js-cookie";
-import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { ErrorAlert, SuccessMessage } from "../../utilities/AlertMessage";
 import { FormButton, FormTextField } from "../../utilities/Form/FormField";
@@ -7,15 +6,15 @@ import handleForm from "../../utilities/Form/handleForm";
 import OrderOverview from "./OrderOverview/OrderOverview";
 
 export default function BillingDetails() {
-  const router = useRouter();
+  // const router = useRouter();
 
   const userInfo =
     Cookie.get("user_information") &&
     JSON.parse(Cookie.get("user_information"));
 
-  if (!userInfo?.user_email) {
-    router.push("/my_account/my_acc");
-  }
+  // if (!userInfo?.user_email) {
+  //   router.push("/my_account/my_acc");
+  // }
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState(userInfo?.user_email);
