@@ -10,7 +10,8 @@ export default function NavigationBar() {
   const dispatch = useDispatch();
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:3000/api/allproducts`)
+    // fetch(`http://localhost:3000/api/allproducts`)
+    fetch(`https://daily-need.vercel.app/api/allproducts`)
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
