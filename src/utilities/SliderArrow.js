@@ -15,7 +15,7 @@ export default function SliderArrow() {
           justifyContent: "center",
           alignItems: "center",
           position: "absolute",
-          right: "-15px!important",
+          right: "-10px!important",
         }}
         onClick={onClick}
       />
@@ -38,7 +38,7 @@ export default function SliderArrow() {
           justifyContent: "center",
           alignItems: "center",
           position: "absolute",
-          left: "-14px!important",
+          left: "-10px!important",
         }}
         onClick={onClick}
       />

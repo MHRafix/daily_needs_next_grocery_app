@@ -1,5 +1,6 @@
 import Cookie from "js-cookie";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 import { profile_navigation } from "../../../fake_data/all_fakedata";
 import UserPic from "../../../images/logo/1642355899259.jpg";
@@ -12,13 +13,13 @@ export default function ProfileNavigation() {
     JSON.parse(Cookie.get("user_information"));
 
   // prevent fake user
-  // const router = useRouter();
+  const router = useRouter();
 
   // handle logout and remove user information cookie from the browser
   const handleLogout = () => {
     Cookie.remove("user_information");
     Cookie.remove("user_verify");
-    // router.push("/my_account/my_acc");
+    router?.push("/my_account/my_acc");
   };
 
   return (

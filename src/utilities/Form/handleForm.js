@@ -24,7 +24,7 @@ export default function handleForm(user_info, cnfPassword, api_url) {
         if (user_info?.user_password) {
           if (user_info?.user_password.length > 5) {
             // send req to server
-            sendReq(reqDep, "/");
+            sendReq(reqDep, "/my_account/my_profile/edit_account_details");
           } else {
             setSuccess("");
             setError("Password must be atleast 6 charecters!");
@@ -53,7 +53,8 @@ const sendReq = async (reqDep, redirect_url) => {
   const { redirect } = router.query;
 
   const { data } = await axios.post(
-    `http://daily-need.vercel.app/api/${api_url}`,
+    // `http://localhost:3000/api/${api_url}`,
+    `https://daily-need.vercel.app/api/${api_url}`,
     user_info
   );
 

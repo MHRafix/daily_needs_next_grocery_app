@@ -1,5 +1,4 @@
 import Image from "next/image";
-import NextLink from "next/link";
 import React from "react";
 import { useDispatch } from "react-redux";
 
@@ -18,14 +17,12 @@ export default function OrderProduct({ product }) {
         </div>
         <div className="ml-10 !text-left">
           <div className="title_price_amount">
-            <NextLink href={`/shop/singleProducts/${product?.slug}`} passHref>
-              <h3
-                id="product_title"
-                className="!text-thin !font-light !text-slate-600"
-              >
-                {product?.title}
-              </h3>
-            </NextLink>
+            <h3
+              id="product_title"
+              className="!text-thin !font-light !text-slate-600 !cursor-default"
+            >
+              {product?.title}
+            </h3>
             <span className="text-thin font-light tracking-wider">
               -{product?.additional_info?.weight}
             </span>
@@ -40,11 +37,13 @@ export default function OrderProduct({ product }) {
         </div>
       </div>
       <div className="w-2/6">
-        ৳
-        {product?.quantity *
+        ৳ &nbsp;
+        {(
+          product?.quantity *
           (product?.prices?.sale_price !== 0
             ? product?.prices?.sale_price
-            : product?.prices?.regular_price)}
+            : product?.prices?.regular_price)
+        ).toFixed(2)}
       </div>
     </div>
   );
