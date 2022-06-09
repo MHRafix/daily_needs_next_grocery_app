@@ -1,8 +1,9 @@
+import Cookie from "js-cookie";
 import Image from "next/image";
 import NextLink from "next/link";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { qtyDecrease, qtyIncrease } from "../../redux/cart_products/action";
+import { qtyIncrease } from "../../redux/cart_products/action";
 import { handleReduceCart } from "../../utilities/handleReduceCart";
 
 export default function TableBody({ carted_products }) {
@@ -34,14 +35,14 @@ export default function TableBody({ carted_products }) {
         <div id="add_to_cart_area">
           <button
             id="qty_controller"
-            onClick={() => dispatch(qtyDecrease(_id))}
+            onClick={() => handleUpdatCart(dispatch, qtyIncrease, _id, false)}
           >
             -
           </button>
           <span id="cart_qty">{quantity}</span>
           <button
             id="qty_controller"
-            onClick={() => dispatch(qtyIncrease(_id))}
+            onClick={() => handleUpdatCart(dispatch, qtyIncrease, _id, true)}
           >
             +
           </button>
@@ -62,3 +63,24 @@ export default function TableBody({ carted_products }) {
     </div>
   );
 }
+
+const handleUpdatCart = (dispatch, qtyIncrease, _id, dependency) => {
+  const carted_products =
+    Cookie.get("cart_product_ids") &&
+    JSON.parse(Cookie.get("cart_product_ids"));
+
+  if (carted_products) {
+    const selected_product = carted_products.find(
+      (product) => product._id === _id
+    );
+
+    selected_product.quantity = selected_product.quantity + 1;
+
+    const rest_cart = carted_products.filter((product) => product._id !== _id);
+
+    rest_cart.push(selected_product);
+    Cookie.set("cart_product_ids", JSON.stringify(rest_cart));
+
+    dispatch(qtyIncrease(_id));
+  }
+};

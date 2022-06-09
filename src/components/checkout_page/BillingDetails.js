@@ -54,7 +54,6 @@ export default function BillingDetails() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    console.log(order_data);
 
     const { data } = await axios.post(
       // "http://localhost:3000/api/checkout/place_order",
