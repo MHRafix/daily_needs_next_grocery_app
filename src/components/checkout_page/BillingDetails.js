@@ -57,7 +57,8 @@ export default function BillingDetails() {
     console.log(order_data);
 
     const { data } = await axios.post(
-      "http://localhost:3000/api/checkout/place_order",
+      // "http://localhost:3000/api/checkout/place_order",
+      "https://daily-need.vercel.app/api/checkout/place_order",
       order_data
     );
 
