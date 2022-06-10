@@ -1,6 +1,6 @@
 import Cookie from "js-cookie";
 import NextLink from "next/link";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { header_navigation } from "../../../fake_data/all_fakedata";
 import { reduceCookie } from "../../../redux/cart_products/action";

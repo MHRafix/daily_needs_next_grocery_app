@@ -1,7 +1,6 @@
 import Cookie from "js-cookie";
 import Image from "next/image";
 import NextLink from "next/link";
-import React from "react";
 import { useDispatch } from "react-redux";
 import { qtyDecrease, qtyIncrease } from "../../redux/cart_products/action";
 import { handleReduceCart } from "../../utilities/handleReduceCart";
@@ -72,23 +71,25 @@ const handleUpdateCart = (dispatch, updateDep, _id, dependency) => {
     const selected_product = carted_products.find(
       (product) => product._id === _id
     );
-    if (selected_product.quantity > 1 && selected_product.quantity < 10) {
-      if (dependency) {
+    if (dependency) {
+      if (selected_product.quantity < 10) {
         selected_product.quantity = selected_product.quantity + 1;
         dispatch(updateDep(_id));
       } else {
+        alert("Maximum quantity limit exceed!");
+      }
+    } else {
+      if (selected_product.quantity > 1) {
         selected_product.quantity = selected_product.quantity - 1;
         dispatch(updateDep(_id));
+      } else {
+        alert("Minimum quantity limit exceed!");
       }
-
-      const rest_cart = carted_products.filter(
-        (product) => product._id !== _id
-      );
-
-      rest_cart.push(selected_product);
-      Cookie.set("cart_product_ids", JSON.stringify(rest_cart));
-    } else {
-      alert("Quantity should be upto 1 - 10!");
     }
+
+    const rest_cart = carted_products.filter((product) => product._id !== _id);
+
+    rest_cart.push(selected_product);
+    Cookie.set("cart_product_ids", JSON.stringify(rest_cart));
   }
 };

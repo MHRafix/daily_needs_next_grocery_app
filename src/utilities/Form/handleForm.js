@@ -32,7 +32,7 @@ export default function handleForm(user_info, cnfPassword, api_url) {
           }
         } else {
           // send req to server
-          sendReq(reqDep, "/my_account/my_profile/edit_account_details");
+          sendReq(reqDep, "/my_account/my_profile/dashboard");
         }
       } else {
         setSuccess("");

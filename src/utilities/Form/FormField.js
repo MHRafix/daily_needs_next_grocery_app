@@ -1,5 +1,3 @@
-import React from "react";
-
 export const FormTextField = ({
   form_label,
   type,
@@ -40,10 +38,10 @@ export const FormTextArea = ({ form_label, cols, rows, required }) => {
   );
 };
 
-export const FormButton = ({ type, btn_name }) => {
+export const FormButton = ({ type, btn_name, disable }) => {
   return (
     <div id="field_wrapper">
-      <button type={type} id="form_btn">
+      <button type={type} id="form_btn" disabled={disable}>
         {btn_name}
       </button>
     </div>

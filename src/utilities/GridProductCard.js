@@ -1,25 +1,15 @@
 import Image from "next/image";
 import NextLink from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
+import { ImCross } from "react-icons/im";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { handleAddToCart } from "./handleCart";
 
 export default function GridProductCard({ product_data }) {
-  const {
-    _id,
-    slug,
-    title,
-    thumbnail,
-    prices,
-    category,
-    reviews_ratings,
-    stock_available,
-    sold_quantity,
-    additional_info,
-    product_status,
-  } = product_data;
+  const { slug, title, thumbnail, prices, stock_available, product_status } =
+    product_data;
   const dispatch = useDispatch();
   const { regular_price, sale_price } = prices;
 
@@ -61,7 +51,7 @@ export default function GridProductCard({ product_data }) {
             </h5>
           ) : (
             <h5 id="stock_status_out" className="!text-red">
-              <BsCheckCircleFill />
+              <ImCross />
               &nbsp;&nbsp;
               <strong id="stronger" className="!text-red">
                 Stock Out

@@ -1,4 +1,3 @@
-import React from "react";
 import OrderProduct from "./OrderProduct";
 
 export default function OrderOverview({ carted_products }) {
@@ -23,21 +22,21 @@ export default function OrderOverview({ carted_products }) {
             Subtotal
           </div>
         </div>
-        <div>
-          {carted_products.length ? (
-            carted_products?.map((product) => (
-              <OrderProduct key={product._id} product={product} />
-            ))
-          ) : (
-            <div className="my-5 text-black2 tracking-wide">
-              Loading Data....
+        {carted_products.length ? (
+          <>
+            <div>
+              {carted_products?.map((product) => (
+                <OrderProduct key={product._id} product={product} />
+              ))}
             </div>
-          )}
-        </div>
-        <div className="flex items-center justify-between px-2 text-black2 tracking-wider font-semibold">
-          <div className="text-left">Payable Amount:</div>
-          <div className="pr-2">৳ {total_amount.toFixed(2)}</div>
-        </div>
+            <div className="flex items-center justify-between px-2 text-black2 tracking-wider font-semibold">
+              <div className="text-left">Payable Amount:</div>
+              <div className="pr-2">৳ {total_amount.toFixed(2)}</div>
+            </div>
+          </>
+        ) : (
+          <div className="my-5 text-black2 tracking-wide">Loading Data....</div>
+        )}
       </div>
     </div>
   );

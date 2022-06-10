@@ -1,13 +1,15 @@
 import axios from "axios";
 import Cookie from "js-cookie";
-import React, { useState } from "react";
+import NextLink from "next/link";
+import { useRouter } from "next/router";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import { ErrorAlert, SuccessMessage } from "../../utilities/AlertMessage";
 import { FormButton, FormTextField } from "../../utilities/Form/FormField";
 import OrderOverview from "./OrderOverview/OrderOverview";
 
 export default function BillingDetails() {
-  // const router = useRouter();
+  const router = useRouter();
   const products_data = useSelector((state) => state.cart_product.cart_list);
 
   let total_amount = 0;
@@ -77,6 +79,10 @@ export default function BillingDetails() {
       setError("");
       setSuccess(data?.success);
       Cookie.remove("cart_product_ids");
+
+      setTimeout(() => {
+        router.push("/shop/grid_shop");
+      }, 2000);
     } else {
       setSuccess("");
       setError(data.error);
@@ -85,6 +91,18 @@ export default function BillingDetails() {
 
   return (
     <>
+      {!products_data.length && (
+        <div className="lg:flex">
+          <div className="lg:w-3/4  my-2 lg:mr-2">
+            <ErrorAlert message="Your cart is empty. You'r not able to order products!" />
+          </div>
+          <div className="lg:w-1/4 my-2 lg:ml-2">
+            <NextLink href="/shop/grid_shop" passHref>
+              <button className="location_pushBtn !mt-0">Back To Shop</button>
+            </NextLink>
+          </div>
+        </div>
+      )}
       <div className="lg:flex justify-between">
         <div className="order_overview lg:w-2/5 lg:mr-10 ">
           <div className="title_of_details">
@@ -154,7 +172,11 @@ export default function BillingDetails() {
               setState={setStreet}
             />
 
-            <FormButton type="submit" btn_name="Place Order" />
+            <FormButton
+              type="submit"
+              disable={!products_data.length ? true : false}
+              btn_name="Place Order"
+            />
           </form>
         </div>
       </div>
