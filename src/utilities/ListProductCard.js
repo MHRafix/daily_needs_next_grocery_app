@@ -1,6 +1,6 @@
 import Image from "next/image";
 import NextLink from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useDispatch } from "react-redux";
@@ -13,17 +13,15 @@ export default function ListProductCard({ product_data }) {
     title,
     thumbnail,
     prices,
-    category,
-    reviews_ratings,
     stock_available,
-    sold_quantity,
     additional_info,
     product_status,
   } = product_data;
+
   const dispatch = useDispatch();
   const { regular_price, sale_price } = prices;
-
   const [qty, setQty] = useState(1);
+
   return (
     <>
       <div id="product_card_list_style">
@@ -69,11 +67,29 @@ export default function ListProductCard({ product_data }) {
             {additional_info?.description.slice(0, 170)}
           </div>
           <div id="add_to_cart_area_list">
-            <button id="qty_controller" onClick={() => setQty(qty - 1)}>
+            <button
+              id="qty_controller"
+              onClick={() => {
+                if (qty > 1) {
+                  setQty(qty - 1);
+                } else {
+                  alert("Minimum quantity limit exceed!");
+                }
+              }}
+            >
               -
             </button>
             <span id="cart_qty">{qty}</span>
-            <button id="qty_controller" onClick={() => setQty(qty + 1)}>
+            <button
+              id="qty_controller"
+              onClick={() => {
+                if (qty < 10) {
+                  setQty(qty + 1);
+                } else {
+                  alert("Maximum quantity limit exceed!");
+                }
+              }}
+            >
               +
             </button>
           </div>
