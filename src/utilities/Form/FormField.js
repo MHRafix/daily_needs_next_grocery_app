@@ -40,8 +40,8 @@ export const FormTextArea = ({ form_label, cols, rows, required }) => {
 
 export const FormButton = ({ type, btn_name, disable }) => {
   return (
-    <div id="field_wrapper">
-      <button type={type} id="form_btn" disabled={disable}>
+    <div id="field_wrapper" className="lg:!w-1/4">
+      <button type={type} id="form_btn" className="!w-full" disabled={disable}>
         {btn_name}
       </button>
     </div>

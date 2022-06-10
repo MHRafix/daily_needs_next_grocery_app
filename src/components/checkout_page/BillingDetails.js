@@ -1,15 +1,18 @@
 import axios from "axios";
 import Cookie from "js-cookie";
-import NextLink from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { reduceCookie } from "../../redux/cart_products/action";
 import { ErrorAlert, SuccessMessage } from "../../utilities/AlertMessage";
 import { FormButton, FormTextField } from "../../utilities/Form/FormField";
+import PaypalModal from "../../utilities/PaymentModal/PaypalModal";
 import OrderOverview from "./OrderOverview/OrderOverview";
 
 export default function BillingDetails() {
   const router = useRouter();
+  const dispatch = useDispatch();
+  const empty_data = [];
   const products_data = useSelector((state) => state.cart_product.cart_list);
 
   let total_amount = 0;
@@ -27,10 +30,7 @@ export default function BillingDetails() {
     Cookie.get("user_information") &&
     JSON.parse(Cookie.get("user_information"));
 
-  // if (!userInfo?.user_email) {
-  //   router.push("/my_account/my_acc");
-  // }
-
+  const [paypalModal, setPaypalModal] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
@@ -40,6 +40,7 @@ export default function BillingDetails() {
   const [country, setCountry] = useState("");
   const [district, setDistrict] = useState("");
   const [street, setStreet] = useState("");
+  const [payment, setPayment] = useState("cash-on");
 
   // make a user data object for ordering the products
   const order_data = {
@@ -53,7 +54,7 @@ export default function BillingDetails() {
       customer_street: street,
     },
     product_status: {
-      payment_method: "cash-on",
+      payment_method: payment,
       payment_status: "due",
       order_status: "pendding",
       order_condition: "your order is pendding and unpaid.",
@@ -69,40 +70,36 @@ export default function BillingDetails() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    const { data } = await axios.post(
-      // "http://localhost:3000/api/checkout/place_order",
-      "https://daily-need.vercel.app/api/checkout/place_order",
-      order_data
-    );
+    if (payment === "cash-on") {
+      setPaypalModal(false);
 
-    if (data?.success) {
-      setError("");
-      setSuccess(data?.success);
-      Cookie.remove("cart_product_ids");
+      const { data } = await axios.post(
+        // "http://localhost:3000/api/checkout/place_order",
+        "https://daily-need.vercel.app/api/checkout/place_order",
+        order_data
+      );
 
-      setTimeout(() => {
-        router.push("/shop/grid_shop");
-      }, 2000);
+      if (data?.success) {
+        setError("");
+        setSuccess(data?.success);
+        Cookie.remove("cart_product_ids");
+
+        setTimeout(() => {
+          dispatch(reduceCookie(empty_data));
+          router.push("/shop/grid_shop");
+        }, 2000);
+      } else {
+        setSuccess("");
+        setError(data.error);
+      }
     } else {
-      setSuccess("");
-      setError(data.error);
+      setPaypalModal(true);
     }
   };
 
   return (
     <>
-      {!products_data.length && (
-        <div className="lg:flex">
-          <div className="lg:w-3/4  my-2 lg:mr-2">
-            <ErrorAlert message="Your cart is empty. You'r not able to order products!" />
-          </div>
-          <div className="lg:w-1/4 my-2 lg:ml-2">
-            <NextLink href="/shop/grid_shop" passHref>
-              <button className="location_pushBtn !mt-0">Back To Shop</button>
-            </NextLink>
-          </div>
-        </div>
-      )}
+      {paypalModal && <PaypalModal />}
       <div className="lg:flex justify-between">
         <div className="order_overview lg:w-2/5 lg:mr-10 ">
           <div className="title_of_details">
@@ -130,7 +127,6 @@ export default function BillingDetails() {
               disabled={false}
               setState={setName}
             />
-
             <FormTextField
               form_label="your email"
               type="email"
@@ -139,7 +135,6 @@ export default function BillingDetails() {
               disabled={false}
               setState={setEmail}
             />
-
             <FormTextField
               form_label="mobile number"
               type="text"
@@ -147,7 +142,6 @@ export default function BillingDetails() {
               disabled={false}
               setState={setMobile}
             />
-
             <FormTextField
               form_label="your country"
               type="text"
@@ -155,7 +149,6 @@ export default function BillingDetails() {
               disabled={false}
               setState={setCountry}
             />
-
             <FormTextField
               form_label="your district"
               type="text"
@@ -163,7 +156,6 @@ export default function BillingDetails() {
               disabled={false}
               setState={setDistrict}
             />
-
             <FormTextField
               form_label="street address"
               type="text"
@@ -171,6 +163,29 @@ export default function BillingDetails() {
               disabled={false}
               setState={setStreet}
             />
+
+            <div>
+              <label id="input_label" htmlFor="field_label">
+                Payment Type
+              </label>
+              <br />
+              <input
+                style={{ marginBottom: "20px", marginTop: "10px" }}
+                type="radio"
+                name="payment_method"
+                value="cash-on"
+                onChange={(e) => setPayment(e.target.value)}
+                // checked
+              />
+              &nbsp;&nbsp; Cash On &nbsp;&nbsp;&nbsp;
+              <input
+                type="radio"
+                name="payment_method"
+                value="paypal"
+                onChange={(e) => setPayment(e.target.value)}
+              />
+              &nbsp;&nbsp; Paypal
+            </div>
 
             <FormButton
               type="submit"

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ErrorAlert, SuccessMessage } from "../../utilities/AlertMessage";
 import { FormButton, FormTextField } from "../../utilities/Form/FormField";
 import handleForm from "../../utilities/Form/handleForm";
@@ -62,7 +62,7 @@ export default function SignupForm() {
         described in our privacy policy.
       </p>
 
-      <FormButton type="submit" btn_name="Registraion Now" />
+      <FormButton type="submit" btn_name="Signup Now" />
     </form>
   );
 }

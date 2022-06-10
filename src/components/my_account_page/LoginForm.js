@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ErrorAlert, SuccessMessage } from "../../utilities/AlertMessage";
 import { FormButton, FormTextField } from "../../utilities/Form/FormField";
 import handleForm from "../../utilities/Form/handleForm";
@@ -44,7 +44,7 @@ export default function LoginForm() {
         required={true}
       />
 
-      <FormButton type="submit" btn_name="Login Now" />
+      <FormButton type="submit" btn_name="Signin Now" />
       <p className="text-light text-black4 tracking-wide cursor-pointer mt-10 hover:text-red-400 hover:duration-300">
         Lost your password?
       </p>
