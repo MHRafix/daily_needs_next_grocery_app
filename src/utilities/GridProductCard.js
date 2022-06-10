@@ -53,11 +53,22 @@ export default function GridProductCard({ product_data }) {
           <NextLink href={`/shop/singleProducts/${slug}`} passHref>
             <h3 id="product_title">{title}</h3>
           </NextLink>
-          <h5 id="stock_status">
-            <BsCheckCircleFill />
-            &nbsp;&nbsp;<strong id="stronger">{product_status}</strong>&nbsp;
-            <span style={{ color: "#666" }}> - 1 kg</span>
-          </h5>
+          {stock_available > 0 ? (
+            <h5 id="stock_status">
+              <BsCheckCircleFill />
+              &nbsp;&nbsp;<strong id="stronger">{product_status}</strong>&nbsp;
+              <span style={{ color: "#666" }}> - 1 kg</span>
+            </h5>
+          ) : (
+            <h5 id="stock_status_out" className="!text-red">
+              <BsCheckCircleFill />
+              &nbsp;&nbsp;
+              <strong id="stronger" className="!text-red">
+                Stock Out
+              </strong>
+              &nbsp;
+            </h5>
+          )}
           <div id="product_price">
             <span id={sale_price !== 0 ? "regular_price" : "sale_price"}>
               ৳ {regular_price}
@@ -66,13 +77,32 @@ export default function GridProductCard({ product_data }) {
             {sale_price !== 0 && <span id="sale_price">৳ {sale_price}</span>}
           </div>
         </div>
+
         <div id="card_action">
           <div id="add_to_cart_area">
-            <button id="qty_controller" onClick={() => setQty(qty - 1)}>
+            <button
+              id="qty_controller"
+              onClick={() => {
+                if (qty > 1) {
+                  setQty(qty - 1);
+                } else {
+                  alert("Minimum quantity limit exceed!");
+                }
+              }}
+            >
               -
             </button>
             <span id="cart_qty">{qty}</span>
-            <button id="qty_controller" onClick={() => setQty(qty + 1)}>
+            <button
+              id="qty_controller"
+              onClick={() => {
+                if (qty < 10) {
+                  setQty(qty + 1);
+                } else {
+                  alert("Maximum quantity limit exceed!");
+                }
+              }}
+            >
               +
             </button>
           </div>
@@ -85,7 +115,7 @@ export default function GridProductCard({ product_data }) {
                 <MdOutlineShoppingCart /> &nbsp; Add to cart
               </button>
             ) : (
-              <NextLink href={`/shop/singleProducts/${_id}`} passHref>
+              <NextLink href={`/shop/singleProducts/${slug}`} passHref>
                 <button id="cart_btn">Read more</button>
               </NextLink>
             )}

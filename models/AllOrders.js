@@ -40,6 +40,8 @@ const orderSchema = new mongoose.Schema(
       payment_status: { type: String, required: true },
       order_status: { type: String, required: true },
       order_condition: { type: String, required: true },
+      total_amount: { type: Number, required: true },
+      total_qty: { type: Number, required: true },
       order_date: {
         date: { type: Number, required: true },
         month: { type: Number, required: true },

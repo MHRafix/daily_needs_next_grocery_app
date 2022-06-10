@@ -44,20 +44,23 @@ export default function CheckoutTable({ carted_products }) {
         </div>
       </div>
       <div className="grid_layout layout_two">
-        <div className="flex justify-end items-center">
+        <div className="lg:flex justify-end items-center">
           <input
             type="text"
-            className="p-extra_padding3 mt-4 rounded-sm outline-none border border-slate-300"
+            className="p-extra_padding3 mt-4 rounded-sm outline-none border border-slate-300 lg:!w-2/4 !w-full"
             placeholder="Enter coupon code..."
           />
           &nbsp;&nbsp;
-          <button id="cart_btn" className="!rounded-sm !ml-0 !py-1">
+          <button
+            id="cart_btn"
+            className="!rounded-sm !ml-0 !py-1 lg:!w-1/4 !w-full lg:!mt-4 !mt-0"
+          >
             Apply Coupon
           </button>
         </div>
-        <div className="checkout_btn ml-auto">
+        <div className="checkout_btn ml-auto !mt-0 !w-full">
           <NextLink href="/checkout" passHref>
-            <button id="cart_btn" className="!rounded-sm !ml-0 !py-1">
+            <button id="cart_btn" className="!rounded-sm !ml-0 !py-1 !w-full">
               PROCEED TO CHECKOUT
             </button>
           </NextLink>

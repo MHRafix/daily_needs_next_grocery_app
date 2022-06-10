@@ -10,6 +10,17 @@ export default function BillingDetails() {
   // const router = useRouter();
   const products_data = useSelector((state) => state.cart_product.cart_list);
 
+  let total_amount = 0;
+
+  if (products_data) {
+    for (const products of products_data) {
+      total_amount =
+        products?.prices?.sale_price > 0
+          ? total_amount + products?.prices?.sale_price * products?.quantity
+          : total_amount + products?.prices?.regular_price * products?.quantity;
+    }
+  }
+
   const userInfo =
     Cookie.get("user_information") &&
     JSON.parse(Cookie.get("user_information"));
@@ -44,6 +55,8 @@ export default function BillingDetails() {
       payment_status: "due",
       order_status: "pendding",
       order_condition: "your order is pendding and unpaid.",
+      total_amount: total_amount.toFixed(2),
+      total_qty: products_data.length,
       order_date: {
         date: new Date().getDate(),
         month: new Date().getMonth() + 1,
@@ -54,7 +67,6 @@ export default function BillingDetails() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-
     const { data } = await axios.post(
       // "http://localhost:3000/api/checkout/place_order",
       "https://daily-need.vercel.app/api/checkout/place_order",
@@ -64,6 +76,7 @@ export default function BillingDetails() {
     if (data?.success) {
       setError("");
       setSuccess(data?.success);
+      Cookie.remove("cart_product_ids");
     } else {
       setSuccess("");
       setError(data.error);

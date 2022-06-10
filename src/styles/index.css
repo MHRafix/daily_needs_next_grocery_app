@@ -165,6 +165,10 @@
     @apply flex justify-center items-center text-green mb-7 text-thin;
   }
 
+  #stock_status_out {
+    @apply flex justify-center items-center text-red-500 mb-7 text-thin;
+  }
+
   #stock_status_list {
     @apply flex justify-start items-center text-green mt-2 mb-7 text-thin;
   }

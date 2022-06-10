@@ -69,7 +69,7 @@ export default function ProductView({ product }) {
             </div>
           )}
           <div id="add_to_cart_btn">
-            {product?.stock_available > 0 ? (
+            {product?.stock_available > 0 && (
               <button
                 id="cart_btn"
                 className="!mt-0 !py-1 !px-1.5"
@@ -77,8 +77,6 @@ export default function ProductView({ product }) {
               >
                 <MdOutlineShoppingCart /> &nbsp; Add to cart
               </button>
-            ) : (
-              <button id="cart_btn">Read more</button>
             )}
           </div>
         </div>

@@ -19,6 +19,7 @@ export default function handleForm(user_info, cnfPassword, api_url) {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+
     try {
       if (user_info?.user_password === cnfPassword) {
         if (user_info?.user_password) {
@@ -51,7 +52,6 @@ const sendReq = async (reqDep, redirect_url) => {
   const { api_url, user_info, router, setSuccess, setError } = reqDep;
 
   const { redirect } = router.query;
-
   const { data } = await axios.post(
     // `http://localhost:3000/api/${api_url}`,
     `https://daily-need.vercel.app/api/${api_url}`,
